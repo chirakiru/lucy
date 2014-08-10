@@ -7,6 +7,8 @@
 development:
   adapter: postgresql
   database: development
+  encoding: unicode
+  pool: 5
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -18,3 +20,12 @@ test:
 production:
   adapter: postgresql
   database: production
+  encoding: unicode
+  pool: 5
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
