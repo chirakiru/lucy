@@ -30,9 +30,25 @@ gem 'pg'
 
 gem 'rails_12factor', group: :production
 
+gem 'jbuilder', '~> 1.2'
+
+gem 'haml', "~> 4.0.3"
+
+gem 'bootstrap-sass'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
+  gem 'erb2haml'
+  gem "html2haml"
+  gem 'haml-rails'
+  #gem 'sqlite3'
+  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 end
 
 # Use ActiveModel has_secure_password

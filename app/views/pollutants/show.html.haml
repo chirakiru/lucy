@@ -1,0 +1,28 @@
+%p#notice= notice
+%p
+  %strong Hour:
+  = @pollutant.hour
+%p
+  %strong Station:
+  = @pollutant.station
+%p
+  %strong Pm10:
+  = @pollutant.pm10
+%p
+  %strong 03:
+  = @pollutant.O3
+%p
+  %strong No2:
+  = @pollutant.nO2
+%p
+  %strong So2:
+  = @pollutant.sO2
+%p
+  %strong Co:
+  = @pollutant.CO
+%p
+  %strong Pm25:
+  = @pollutant.pm25
+= link_to 'Edit', edit_pollutant_path(@pollutant)
+|
+\#{link_to 'Back', pollutants_path}
