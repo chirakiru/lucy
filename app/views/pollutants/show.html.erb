@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @pollutant.hour %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @pollutant.station %>
+</p>
+
+<p>
+  <strong>Pm10:</strong>
+  <%= @pollutant.pm10 %>
+</p>
+
+<p>
+  <strong>03:</strong>
+  <%= @pollutant.03 %>
+</p>
+
+<p>
+  <strong>No2:</strong>
+  <%= @pollutant.nO2 %>
+</p>
+
+<p>
+  <strong>So2:</strong>
+  <%= @pollutant.sO2 %>
+</p>
+
+<p>
+  <strong>Co:</strong>
+  <%= @pollutant.CO %>
+</p>
+
+<p>
+  <strong>Pm25:</strong>
+  <%= @pollutant.pm25 %>
+</p>
+
+<%= link_to 'Edit', edit_pollutant_path(@pollutant) %> |
+<%= link_to 'Back', pollutants_path %>

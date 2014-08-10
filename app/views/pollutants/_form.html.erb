@@ -1,0 +1,49 @@
+<%= form_for(@pollutant) do |f| %>
+  <% if @pollutant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pollutant.errors.count, "error") %> prohibited this pollutant from being saved:</h2>
+
+      <ul>
+      <% @pollutant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hour %><br>
+    <%= f.text_field :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :station %><br>
+    <%= f.text_field :station %>
+  </div>
+  <div class="field">
+    <%= f.label :pm10 %><br>
+    <%= f.text_field :pm10 %>
+  </div>
+  <div class="field">
+    <%= f.label :03 %><br>
+    <%= f.text_field :03 %>
+  </div>
+  <div class="field">
+    <%= f.label :nO2 %><br>
+    <%= f.text_field :nO2 %>
+  </div>
+  <div class="field">
+    <%= f.label :sO2 %><br>
+    <%= f.text_field :sO2 %>
+  </div>
+  <div class="field">
+    <%= f.label :CO %><br>
+    <%= f.text_field :CO %>
+  </div>
+  <div class="field">
+    <%= f.label :pm25 %><br>
+    <%= f.text_field :pm25 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

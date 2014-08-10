@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hour: 
+  station: 
+  pm10: 
+  03: 
+  nO2: 
+  sO2: 
+  CO: 
+  pm25: 
+
+two:
+  hour: 
+  station: 
+  pm10: 
+  03: 
+  nO2: 
+  sO2: 
+  CO: 
+  pm25: 
