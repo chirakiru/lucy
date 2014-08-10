@@ -69,6 +69,6 @@ class PollutantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pollutant_params
-      params.require(:pollutant).permit(:hour, :station, :pm10, :03, :nO2, :sO2, :CO, :pm25)
+      params.require(:pollutant).permit(:hour, :station, :pm10, :O3, :nO2, :sO2, :CO, :pm25)
     end
 end
