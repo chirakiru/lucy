@@ -1,4 +1,4 @@
-#luvy
+#lucy
 ===
 
 Plataforma de información y analisis de contaminantes presentes en las principales ciudades.
@@ -9,7 +9,7 @@ Plataforma de información y analisis de contaminantes presentes en las principa
 
 **Lenguaje de Programación:** ruby version 2.1.1
 
-**SGBD** Postgres
+**SGBD:** Postgres
 
 **Dependencias:**
 
@@ -68,9 +68,13 @@ $ guard
 
 ### Contribuir
 
-1.- Crea un fork del proyecto
-2.- Cree su rama de la característica (git checkout -b mi-nueva-función)
-3.- Dale commit a tus cambios (git commit -am 'Añadir alguna característica')
+1.- Crea un fork del proyecto.
+
+2.- Cree su rama de la característica (git checkout -b mi-nueva-función).
+
+3.- Dale commit a tus cambios (git commit -am 'Añadir alguna característica').
+
 4.- Empuja para crear el nuevo branch(git push origin mi-nueva-función).
-5.- Crear un pull request
+
+5.- Crear un pull request.
 
