@@ -36,6 +36,8 @@ gem 'haml', "~> 4.0.3"
 
 gem 'bootstrap-sass'
 
+gem 'autoprefixer-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
