@@ -8,7 +8,8 @@ Web - RoR  | Ruby (2.1.1) | PostgreSQL
 
 ## Requerimientos
 
-- Instala la versión de Ruby que usa el proyecto (2.1.1)
+### Ruby
+Instala la versión de Ruby que usa el proyecto (2.1.1)
 
 **Nota:** [aquí](http://rvm.io/rvm/install) puedes encontrar la guía de instalación de RVM
 
@@ -16,22 +17,22 @@ Web - RoR  | Ruby (2.1.1) | PostgreSQL
 $ rvm install 2.1
 ```
 
-- Instalar PostgreSQL
+### PostgreSQL
 
-### OS X
+#### OS X
 Puedes instalarlo usando [Homebrew](http://brew.sh/)
 
 ```
 $ brew install postgresql
 ```
 
-### Ubuntu
+#### Ubuntu
 
 ```
 $ apt-get install postgresql-9.3 
 ```
 
-### Windows
+#### Windows
 Para Windows puede usar el instalador gráfico que se encuenta en la siguiente URL: [http://www.postgresql.org/download/windows/](http://www.postgresql.org/download/windows/)
 
 ## Desarrollo
