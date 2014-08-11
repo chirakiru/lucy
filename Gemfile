@@ -38,6 +38,8 @@ gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
 
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -50,7 +52,6 @@ group :development do
   gem "html2haml"
   gem 'haml-rails'
   #gem 'sqlite3'
-  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 end
 
 # Use ActiveModel has_secure_password
