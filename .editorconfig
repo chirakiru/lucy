@@ -1,0 +1,17 @@
+# Para más info de este archivo visita: http://EditorConfig.org
+
+# Línea para indicar que este es el editor config del root del proyecto
+root = true
+
+# Sección aplicable a  todos los archivos
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Sección aplicable para los archivos de Markdown
+[*.md]
+trim_trailing_whitespace = false
