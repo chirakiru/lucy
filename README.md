@@ -1,66 +1,69 @@
-#lucy
-===
+# lucy
 
 Plataforma de información y analisis de contaminantes presentes en las principales ciudades.
 
-**Plataforma:** web
+Plataforma | Lenguaje | SGBD 
+-----------|----------|-----
+Web - RoR  | Ruby (2.1.1) | PostgreSQL
 
-**Plataforma de Desarrollo:** Ruby & Rails
+## Requerimientos
 
-**Lenguaje de Programación:** ruby version 2.1.1
+### Ruby
+Instala la versión de Ruby que usa el proyecto (2.1.1)
 
-**SGBD:** Postgres
+**Nota:** [aquí](http://rvm.io/rvm/install) puedes encontrar la guía de instalación de RVM
 
-**Dependencias:**
+```
+$ rvm install 2.1
+```
 
-* Ver gemfile
+### PostgreSQL
 
-## Instalación
-
-1.- Descargar el proyecto desde la terminal
-	
-	$ git clone https://github.com/chirakiru/lucy.git
- 
-2.- Instalar la version de ruby que ocupa la app.
-
-3.- Instalar postgresql
-
-Mac OS.
-
-Usando [homebrew](http://brew.sh/).
+#### OS X
+Puedes instalarlo usando [Homebrew](http://brew.sh/)
 
 ```
 $ brew install postgresql
 ```
 
-Linux distro ubuntu.
+Para iniciar postgres puedes usar los siguiente:
+
+```
+$ initdb /usr/local/var/postgres
+$ cp /usr/local/Cellar/postgresql/9.*.*/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+$ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+$ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+```
+
+#### Ubuntu
 
 ```
 $ apt-get install postgresql-9.3 
 ```
 
-windows
+#### Windows
+Para Windows puede usar el instalador gráfico que se encuenta en la siguiente URL: [http://www.postgresql.org/download/windows/](http://www.postgresql.org/download/windows/)
+
+## Desarrollo
+Para iniciar el desarrollo, deberás seguir los siguientes pasos:
+
+- Crear BD y correr migraciones.
+
+``` 
+$ rake db:create
+$ rake db:migrate
+``` 
+
+- Iniciar la aplicación en el ambiente de desarrollo
 
 ```
-$ suerte ^_^
-```
-[http://www.postgresql.org/download/windows/](http://www.postgresql.org/download/windows/)
-
-4.- Crear BD y correr migraciones.
- 
-    $ rake db:create
-    $ rake db:migrate
- 
-5.- Arrancar el servicio.
-
-- Desplegar desarollo.
-
-	```
 $ rails s - 3000 -e development
 $ sidekiq -e development &
-	```
-	
-6.- Para el desarollo del front-end se utiliza [guard-livereload](https://github.com/guard/guard-livereload) para automatizar la recarga en los navegadores. Para arrancar utilizar el siguiente comando en la raiz del proyecto:
+```
+
+
+### Nota	
+Para el desarollo del front-end se utiliza [guard-livereload](https://github.com/guard/guard-livereload) para automatizar la recarga de los navegadores. Para arrancarlo utiliza el siguiente comando en la raiz del proyecto:
 
 ```
 $ guard
@@ -68,13 +71,9 @@ $ guard
 
 ### Contribuir
 
-1.- Crea un fork del proyecto.
-
-2.- Cree su rama de la característica (git checkout -b mi-nueva-función).
-
-3.- Dale commit a tus cambios (git commit -am 'Añadir alguna característica').
-
-4.- Empuja para crear el nuevo branch(git push origin mi-nueva-función).
-
-5.- Crear un pull request.
+1. Crea un fork del proyecto
+2. Crea una rama de la característica nueva ( ```git checkout -b mi-nueva-caracteristica``` )
+3. Haz un commit de tus cambios ( ```git commit -am 'Añadir alguna característica'``` )
+4. Sube tu branch a GitHub ( ```git push origin mi-nueva-caracteristica``` )
+5. Crear un pull request y añade una descripción de tus cambios
 
