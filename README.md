@@ -1,17 +1,15 @@
-# lucy
+# Lucy
 
-Plataforma de información y analisis de contaminantes presentes en las principales ciudades.
+Information and analysis platform of contaminants in the major cities.
 
-Plataforma | Lenguaje | SGBD 
------------|----------|-----
-Web - RoR  | Ruby (2.1.1) | PostgreSQL
+Platform  | Language     | DBMS
+----------|--------------|-----
+Web - RoR | Ruby (2.1.1) | PostgreSQL
 
-## Requerimientos
+## Requirements
 
 ### Ruby
-Instala la versión de Ruby que usa el proyecto (2.1.1)
-
-**Nota:** [aquí](http://rvm.io/rvm/install) puedes encontrar la guía de instalación de RVM
+Lucy uses Ruby 2.1.1, if you use [RVM](http://rvm.io) you can install it with:
 
 ```
 $ rvm install 2.1
@@ -20,13 +18,27 @@ $ rvm install 2.1
 ### PostgreSQL
 
 #### OS X
-Puedes instalarlo usando [Homebrew](http://brew.sh/)
+You can install it using [Homebrew](http://brew.sh/):
 
 ```
 $ brew install postgresql
 ```
 
-Para iniciar postgres puedes usar los siguiente:
+#### Ubuntu
+In Ubuntu you would run:
+
+```
+$ apt-get install postgresql-9.3
+```
+
+#### Windows
+And for Windows there's a graphic installer, you cand download it from
+[here](http://www.postgresql.org/download/windows/)
+
+## Development
+To start developing Lucy, follow the next steps:
+
+### Start PostgreSQL server
 
 ```
 $ initdb /usr/local/var/postgres
@@ -35,45 +47,32 @@ $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 $ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 ```
 
-#### Ubuntu
+### Create the DB and run the migrations
 
 ```
-$ apt-get install postgresql-9.3 
-```
-
-#### Windows
-Para Windows puede usar el instalador gráfico que se encuenta en la siguiente URL: [http://www.postgresql.org/download/windows/](http://www.postgresql.org/download/windows/)
-
-## Desarrollo
-Para iniciar el desarrollo, deberás seguir los siguientes pasos:
-
-- Crear BD y correr migraciones.
-
-``` 
 $ rake db:create
 $ rake db:migrate
-``` 
+```
 
-- Iniciar la aplicación en el ambiente de desarrollo
+### Start the app in development enviroment
 
 ```
 $ rails s - 3000 -e development
 $ sidekiq -e development &
 ```
 
-
-### Nota	
-Para el desarollo del front-end se utiliza [guard-livereload](https://github.com/guard/guard-livereload) para automatizar la recarga de los navegadores. Para arrancarlo utiliza el siguiente comando en la raiz del proyecto:
+### Note
+The front-end development uses [guard-livereload](https://github.com/guard/guard-livereload) to automatically refresh the web browser. To start it use the following command in the project's root:
 
 ```
 $ guard
 ```
 
-### Contribuir
+## Contributing
 
-1. Crea un fork del proyecto
-2. Crea una rama de la característica nueva ( ```git checkout -b mi-nueva-caracteristica``` )
-3. Haz un commit de tus cambios ( ```git commit -am 'Añadir alguna característica'``` )
-4. Sube tu branch a GitHub ( ```git push origin mi-nueva-caracteristica``` )
-5. Crear un pull request y añade una descripción de tus cambios
-
+- [Fork the project](https://github.com/chirakiru/lucy/fork)
+- Clone down your fork ( ```git clone git@github.com:<username>/lucy.git``` ).
+- Create a topic branch to contain your change ( ```git checkout -b my-awesome-feature``` ).
+- Make sure everything still works.
+- Push the branch up ( ```git push origin my-awesome-feature``` ).
+- Create a pull request and describe what your change does and the why you think it should be merged.
