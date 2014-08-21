@@ -11,7 +11,7 @@ Web - RoR | Ruby (2.1.1) | PostgreSQL
 ### Ruby
 Lucy uses Ruby 2.1.1, if you use [RVM](http://rvm.io) you can install it with:
 
-```
+```bash
 $ rvm install 2.1
 ```
 
@@ -20,14 +20,14 @@ $ rvm install 2.1
 #### OS X
 You can install it using [Homebrew](http://brew.sh/):
 
-```
+```bash
 $ brew install postgresql
 ```
 
 #### Ubuntu
 In Ubuntu you would run:
 
-```
+```bash
 $ apt-get install postgresql-9.3
 ```
 
@@ -40,7 +40,7 @@ To start developing Lucy, follow the next steps:
 
 ### Start a PostgreSQL server
 
-```
+```bash
 $ initdb /usr/local/var/postgres
 $ cp /usr/local/Cellar/postgresql/9.*.*/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
 $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
@@ -49,14 +49,14 @@ $ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 ### Create the DB and run the migrations
 
-```
+```bash
 $ rake db:create
 $ rake db:migrate
 ```
 
 ### Start the app in development enviroment
 
-```
+```bash
 $ rails s - 3000 -e development
 $ sidekiq -e development &
 ```
@@ -64,7 +64,7 @@ $ sidekiq -e development &
 ### Note
 The front-end development uses [guard-livereload](https://github.com/guard/guard-livereload) to automatically refresh the web browser. To start it use the following command in the project's root:
 
-```
+```bash
 $ guard
 ```
 
