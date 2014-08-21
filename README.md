@@ -1,10 +1,10 @@
 # Lucy
-
-Information and analysis platform of contaminants in the major cities.
+> Information and analysis platform of pollutants in the major cities.
 
 Platform  | Language     | DBMS
 ----------|--------------|-----
 Web - RoR | Ruby (2.1.1) | PostgreSQL
+
 
 ## Requirements
 
@@ -32,13 +32,13 @@ $ apt-get install postgresql-9.3
 ```
 
 #### Windows
-And for Windows there's a graphic installer, you cand download it from
+And for Windows there's a graphic installer, you can download it from
 [here](http://www.postgresql.org/download/windows/)
 
 ## Development
 To start developing Lucy, follow the next steps:
 
-### Start PostgreSQL server
+### Start a PostgreSQL server
 
 ```
 $ initdb /usr/local/var/postgres
@@ -76,3 +76,6 @@ $ guard
 - Make sure everything still works.
 - Push the branch up ( ```git push origin my-awesome-feature``` ).
 - Create a pull request and describe what your change does and the why you think it should be merged.
+
+## License
+[MIT](https://github.com/chirakiru/lucy/blob/master/LICENSE)
