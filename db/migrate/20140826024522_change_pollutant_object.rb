@@ -3,7 +3,7 @@ class ChangePollutantObject < ActiveRecord::Migration
     drop_table :pollutants
     create_table :pollutants do |t|
       t.datetime :hour
-      t.float :station
+      t.string :station
       t.float :pm10
       t.float :O3
       t.float :nO2
