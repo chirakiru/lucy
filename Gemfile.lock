@@ -51,6 +51,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
+    composite_primary_keys (7.0.10)
+      activerecord (~> 4.1.4)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -62,6 +64,8 @@ GEM
     execjs (2.2.1)
     ffi (1.9.3)
     ffi (1.9.3-java)
+    foreigner (1.6.1)
+      activerecord (>= 3.0.0)
     formatador (0.2.5)
     guard (2.6.1)
       formatador (>= 0.2.4)
@@ -204,7 +208,9 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
   coffee-rails (~> 4.0.0)
+  composite_primary_keys
   erb2haml
+  foreigner
   guard-livereload
   haml (~> 4.0.3)
   haml-rails

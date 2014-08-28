@@ -11,22 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122044522) do
+ActiveRecord::Schema.define(version: 20140826024522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pollutants", force: true do |t|
     t.datetime "hour"
-    t.string   "station"
-    t.string   "pm10"
-    t.string   "O3"
-    t.string   "nO2"
-    t.string   "sO2"
-    t.string   "CO"
-    t.string   "pm25"
+    t.float    "station"
+    t.float    "pm10"
+    t.float    "O3"
+    t.float    "nO2"
+    t.float    "sO2"
+    t.float    "CO"
+    t.float    "pm25"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pollutants", ["hour", "station"], name: "by_hour_station", unique: true, using: :btree
 
 end
