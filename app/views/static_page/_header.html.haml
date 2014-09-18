@@ -1,0 +1,15 @@
+%nav.navbar.navbar-default#menu{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand
+        unrespiroamiciudad
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li#contaminantes
+          %a{href:contaminantes_path()}
+            %span contaminantes
