@@ -2,7 +2,15 @@ Unrespiroamiciudad::Application.routes.draw do
   resources :pollutants
 
   root :to => 'static_page#home'
-  
+
+  namespace :api do
+    namespace :v1 do
+      get '/cities', to: 'cities#cities'
+      get '/countries',  to: 'countries#countries'
+      get '/pollutants_agents', to: 'pollutants#pollutants_agents'
+      get '/stations', to: 'stations#stations'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

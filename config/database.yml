@@ -6,8 +6,10 @@
 #
 development:
   adapter: postgresql
-  database: development
   encoding: unicode
+  database: lucy-development
+  password: lucy-development
+  username: lucy-development
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
