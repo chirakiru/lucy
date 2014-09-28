@@ -8,6 +8,7 @@ Unrespiroamiciudad::Application.routes.draw do
       get '/cities', to: 'cities#cities'
       get '/countries',  to: 'countries#countries'
       get '/pollutants_agents', to: 'pollutants#pollutants_agents'
+      get '/stations', to: 'stations#stations'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
