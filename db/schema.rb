@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918223010) do
+ActiveRecord::Schema.define(version: 20140928000136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140918223010) do
   end
 
   create_table "countries", force: true do |t|
-    t.string   "contry"
+    t.string   "country"
     t.string   "code"
     t.string   "description"
     t.string   "reference"
@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 20140918223010) do
     t.string   "description"
     t.string   "page"
     t.string   "reference"
-    t.decimal  "latitude",        precision: 10, scale: 6
-    t.decimal  "longitude",       precision: 10, scale: 6
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,7 +75,5 @@ ActiveRecord::Schema.define(version: 20140918223010) do
     t.decimal  "latitude",    precision: 10, scale: 6
     t.decimal  "longitude",   precision: 10, scale: 6
   end
-
-  add_foreign_key "cities", "pollutants", name: "cities_city_id_fk", column: "city_id"
 
 end
