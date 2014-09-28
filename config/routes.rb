@@ -5,8 +5,9 @@ Unrespiroamiciudad::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get  '/cities', to: 'cities#cities'
-      get  '/countries',  to: 'countries#countries'
+      get '/cities', to: 'cities#cities'
+      get '/countries',  to: 'countries#countries'
+      get '/pollutants_agents', to: 'pollutants#pollutants_agents'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
