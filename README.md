@@ -68,6 +68,12 @@ The front-end development uses [guard-livereload](https://github.com/guard/guard
 $ guard
 ```
 
+### API
+
+ - [Countries](/api/v1/countries.md)
+ - [Cities](/api/v1/cities.md)
+ - [Pollutants](/api/v1/pollutants.md)
+
 ## Contributing
 
 - [Fork the project](https://github.com/chirakiru/lucy/fork)
