@@ -1,0 +1,24 @@
+{
+  "name": "landinga",
+  "version": "1.0.0",
+  "description": "Landing comicgram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "urielable",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^1.5.2",
+    "browser-sync": "^2.11.1",
+    "cheerio": "^0.20.0",
+    "dateformat": "^1.0.12",
+    "feed-read": "0.0.1",
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1",
+    "yql": "^1.0.2"
+  }
+}

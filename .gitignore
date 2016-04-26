@@ -15,4 +15,5 @@
 /log/*.log
 /tmp
 
+pattern/node_modules/
 .DS_Store

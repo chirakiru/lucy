@@ -1,0 +1,216 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lucy - Un respiro a mi ciudad.</title>
+<!--mobile apps-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rental Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--mobile apps-->
+<!--Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/prettySticky.css" type="text/css">
+
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->
+<!-- CDN CSS Leaft Left Maps-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<!-- Leaft Left Maps-->
+<!-- start-smoth-scrolling-->
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){   
+        event.preventDefault();
+    
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+    });
+</script>
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+  <!--banner-->
+  <div  id="home" class="banner">
+    <div class="banner-info">
+      <!--navigation-->
+      <div class="top-nav">
+        <nav>
+          <div class="container">
+            <div class="navbar-header logo">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1><a href="index.html">Lucy</a></h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-right">
+                <li><a href="#home" class="link-kumya active scroll"><span data-letters="Home">Home</span></a></li>
+                <li><a href="about.html" class="link-kumya"><span data-letters="About">About</span></a></li>  
+                <li><a href="portfolio.html" class="link-kumya"><span data-letters="Portfolio">Portfolio</span></a></li>
+                <li><a href="codes.html" class="link-kumya"><span data-letters="Short Codes">Short Codes</span></a></li>
+                <li><a href="blog.html" class="link-kumya"><span data-letters="Blog">Blog</span></a></li>   
+                <li><a href="contact.html" class="link-kumya"><span data-letters="Contact">Contact</span></a></li>
+              </ul> 
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </nav>
+      </div>  
+      <!--//navigation-->
+      <div class="banner-text">
+        <!--banner Slider starts Here-->
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+          // You can also use "$(window).load(function() {"
+          $(function () {
+            // Slideshow 3
+            $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+              $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+              $('.events').append("<li>after event fired.</li>");
+            }
+            });
+        
+          });
+        </script>
+        <!--//End-slider-script-->
+        <div  id="top" class="callbacks_container">
+          <ul class="rslides" id="slider3">
+            <li>
+              <div class="banner-text-info">
+                <h2>WE'LL HELP YOU FIND YOUR DREAM HOME</h2>  
+                <h3>Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua Temporibus autem quibusdam</h3> 
+                <div class="more">
+                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+                </div>  
+              </div>  
+            </li>
+            <li>
+              <div class="banner-text-info">
+                <h2>QUISQUE ORNARE FEUGIAT ERAT SAPIEN</h2> 
+                <h3>In sit amet sapien eros Integer dolore magna aliqua Temporibus lorem lpsum was popularised autem quibusdam</h3> 
+                <div class="more">
+                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+                </div>  
+              </div>  
+            </li>
+            <li>
+              <div class="banner-text-info">
+                <h2>FUSCE PORTTITOR MASSA TURPISGRADA</h2>  
+                <h3>Temporibus autem quibusdam Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua </h3>  
+                <div class="more">
+                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+                </div>  
+              </div>  
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <div class="banner-text">
+        <!--banner Slider starts Here-->
+        <script src="js/responsiveslides.min.js"></script>
+      </div>  
+    </div>
+  </div>
+  <!--//banner-->
+  <!-- services -->
+  <div class="services" id="services">
+    <div id="mtymap"></div>
+  </div>
+  <!-- //services -->
+  <!--slid-->
+  <div class="slid">
+    <div class="container"> 
+      <h3 class="title">Pricing</h3>
+      <div class="slid-row">
+        <div class="col-md-4 slid-grids">
+          <h4>Perspici</h4>
+          <h5>$5000</h5>
+          <div class="more">
+            <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+          </div>  
+        </div>
+        <div class="col-md-4 slid-grids">
+          <h4>Digniss</h4>
+          <h5>$8000</h5>
+          <div class="more">
+            <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+          </div>  
+        </div>
+        <div class="col-md-4 slid-grids">
+          <h4>Acusam</h4>
+          <h5>$2000</h5>
+          <div class="more">
+            <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+          </div>  
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!--//slid-->
+  <!--footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="col-md-4 footer-grids">
+        <h3>Review</h3>
+        <p>Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc. Maecenas ultricies dolor in urna tempus, id egestas erat finibus  interdum lectus eget scelerisque.</p>
+      </div>
+      <div class="col-md-3 footer-grids">
+        <h3>Contact Me</h3>
+        <p>123 NewYork City USA.<br>
+          <span>Office: 908-0000</span>
+        </p>
+        <div class="footer-bottom">
+          <a href="#"><span>Facebook</span></a>
+          <a href="#"><span>Pinterest</span></a>
+          <a href="#"><span>LinkedIn </span></a>
+          <a href="#"><span>Behance</span></a>
+        </div>
+      </div>
+      <div class="col-md-5 footer-grids">
+        <h3>Flickr</h3>
+        <a  class="footer-img" href="single.html"> <img src="images/f1.jpg" alt=""/></a>
+        <a class="footer-img" href="single.html"> <img src="images/f2.jpg" alt=""/></a>
+        <a class="footer-img" href="single.html"> <img src="images/f3.jpg" alt=""/></a>
+      </div>
+      <div class="clearfix"> </div>
+      <div class="footer-copy">
+        <p>© 2016 Rental. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+      </div>
+    </div>
+  </div>
+  <!--//footer-->
+  <!-- script-for prettySticky -->
+  <script src="js/prettySticky.js"></script>
+  <!--//script-for prettySticky -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/bootstrap.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="js/lucy.js"></script> 
+</body>
+</html>
