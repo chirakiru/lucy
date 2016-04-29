@@ -357,7 +357,6 @@ ul.nav.navbar-right {
 	padding:8em 0;
 }
 .services {
-  height: 550px;
 }
 #mtymap { 
   width:750px;
@@ -529,12 +528,12 @@ p {
 /*-- //services --*/
 /*--slid--*/
 .slid {
-  background: url(../images/a.jpg) no-repeat 0px 0px;
+  background: url(../images/banner_mty_0.jpg) no-repeat 0px 0px;
   background-size: cover;
   text-align: center;
 }
 .slid-grids {
-	width: 25%;
+	width: 95%;
 	margin: 0 3em;
 	padding: 2.5em 0 3em;
 	transition: 0.5s all ease;
@@ -556,11 +555,6 @@ p {
 }
 .slid-grids:hover {
   background: rgba(116, 94, 197, 0.78);
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -o-transform: scale(1.15);
 }
 .slid-row {
   margin-top: 4em;
