@@ -23,8 +23,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script> 
 <!-- //js -->
-<!-- CDN CSS Leaft Left Maps-->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <!-- Leaft Left Maps-->
 <!-- start-smoth-scrolling-->
 <script type="text/javascript">
@@ -135,8 +133,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <!--//banner-->
   <!-- services -->
-  <div class="services" id="services">
-    <div id="mtymap"></div>
+  <div class="services" id="services" style="margin:0px;padding:0px;overflow:hidden">
+    <iframe height="600" width="100%" src="/map.html" style="border: 0 none; margin-bottom: -5px;">
+    </iframe>
   </div>
   <!-- //services -->
   <!--slid-->
@@ -194,6 +193,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/bootstrap.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </body>
 </html>
