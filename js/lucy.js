@@ -21,11 +21,5 @@ AddQuote = (function() {
 })();
 
 $(document).on('page:load ready', function() {
-  var map;
-  map = L.map('mtymap', {
-    center: [51.505, -0.09],
-    zoom: 13
-  });
-  console.log('jjjj');
   return AddQuote.add();
 });
