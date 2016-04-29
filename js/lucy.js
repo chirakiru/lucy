@@ -8,7 +8,7 @@ AddQuote = (function() {
   _add_to_list = function() {
     var _quote_div;
     _quote_div = $('#quote');
-    return $.getJSON('../air_quotes.json', function(data) {
+    return $.getJSON('../data/air_quotes.json', function(data) {
       var content, entry;
       entry = data[Math.floor(Math.random() * data.length)];
       content = "<h5>" + entry.quote + "</h5><h4>- " + entry.author + "</h4>";

@@ -1,0 +1,38 @@
+[
+  { 
+    "short_name":"P.M. 10",
+    "pollutant": "Particular Menores a 10 µm",
+    "description": "",
+    "shortcut":"pm10"
+  },
+  { 
+    "short_name":"P.M. 2.5",
+    "pollutant": "Particular Menores a 2.5 µm",
+    "description": "",
+    "shortcut":"pm25"
+  },
+  { 
+    "short_name":"O3",
+    "pollutant": "Ozono",
+    "description": "",
+    "shortcut":"o3"
+  },
+  { 
+    "short_name":"CO",
+    "pollutant": "Monóxido de Carbono",
+    "description": "",
+    "shortcut":"co"
+  },
+  { 
+    "short_name":"NO2",
+    "pollutant": "Óxido de Nitrógeno",
+    "description": "",
+    "shortcut":"no2"
+  },
+  { 
+    "short_name":"SO2",
+    "pollutant": "Dióxido de azufre",
+    "description": "",
+    "shortcut":"so2"
+  }
+]
