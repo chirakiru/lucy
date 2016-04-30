@@ -23,8 +23,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script> 
 <!-- //js -->
-<!-- CDN CSS Leaft Left Maps-->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <!-- Leaft Left Maps-->
 <!-- start-smoth-scrolling-->
 <script type="text/javascript">
@@ -54,7 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <h1><a href="index.html">Lucy</a></h1>
+              <h1><a href="index.html"><img src="/images/lucy_logo.png" style="height: 80px"/></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -82,8 +80,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             auto: true,
             pager: true,
             nav: false,
-            speed: 1000,
+            speed: 250,
             namespace: "callbacks",
+            timeout: 6000,
             before: function () {
               $('.events').append("<li>before event fired.</li>");
             },
@@ -135,55 +134,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <!--//banner-->
   <!-- services -->
-  <div class="services" id="services">
-    <div id="mtymap"></div>
+  <div class="services" id="services" style="margin:0px;padding:0px;overflow:hidden">
+    <iframe height="600" width="100%" src="/map.html" style="border: 0 none; margin-bottom: -5px;">
+    </iframe>
   </div>
   <!-- //services -->
   <!--tabs-->
   <div class="tabs">
     <div class="container">
       <div class="col-md-6 tabs-left">
-        <div class="col-xs-2 tab-grid-left"> <!-- required for floating -->
+        <div id="pollutants-nav" class="col-xs-2 tab-grid-left"> <!-- required for floating -->
           <!-- Nav tabs -->
-           <ul class="nav nav-tabs">
-            <li class="active"><a href="#pm10" data-toggle="tab">P.M. 10</a></li>
-            <li><a href="#pm25" data-toggle="tab">P.M. 2.5</a></li>
-            <li><a href="#o3" data-toggle="tab">Ozono</a></li>
-            <li><a href="#co" data-toggle="tab">Monóxido de Carbono</a></li>
-            <li><a href="#no2" data-toggle="tab">Óxido de Nitrógeno</a></li>
-            <li><a href="#so2" data-toggle="tab">Dióxido de azufre</a></li>
+          <ul class="nav nav-tabs">
           </ul>
         </div>
         <div class="col-xs-10 tab-grid-right">
           <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane active" id="Tab1">
-              <div class="text">
-                <h3 class="title">AboutUs</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat. </p>
-                <div class="more more2">
-                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
-                </div>  
-              </div>
-            </div>
-            <div class="tab-pane" id="Tab2">
-              <div class="text">
-                <h3 class="title">Offers</h3>
-                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut At vero eos et accusamus et iusto odio dignissimos ducimus qui </p>
-                <div class="more more2">
-                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
-                </div>  
-              </div>
-            </div>
-            <div class="tab-pane" id="Tab3">
-              <div class="text">
-                <h3 class="title">Advantages</h3>
-                <p>Qapiente itaque earum rerum hic tenetur a delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut At vero eos et accusamus et iusto odio praesentium voluptatum </p>
-                <div class="more more2">
-                  <a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
-                </div>  
-              </div>
-            </div>
+          <div id="pollutants-content" class="tab-content">
+          
           </div>
         </div>
         <div class="clearfix"> </div>
@@ -230,6 +198,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <a href="#"><span>Behance</span></a>
         </div>
       </div>
+      <div class="col-md-5 footer-grids">
+        <h3>Flickr</h3>
+        <a  class="footer-img" href="single.html"> <img src="images/f1.jpg" alt=""/></a>
+        <a class="footer-img" href="single.html"> <img src="images/f2.jpg" alt=""/></a>
+        <a class="footer-img" href="single.html"> <img src="images/f3.jpg" alt=""/></a>
+      </div>
       <div class="clearfix"> </div>
       <div class="footer-copy">
         <p>© 2016 Rental. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
@@ -244,6 +218,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/bootstrap.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </body>
 </html>
