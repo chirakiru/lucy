@@ -35,7 +35,7 @@ $.ajax({
                 "coordinates": station.coordinates
             },
             "properties": {
-                "popupContent": station.name + " (" + station.address + ")",
+                "popupContent": '#' + station.id + ' ' + station.name + " <br/>" + station.address,
                 value: measure.values[0][1],
                 time:  measure.values[0][0],
             },
@@ -65,8 +65,7 @@ $.ajax({
     var geojson;
 
     function onEachFeature(feature, layer) {
-        var popupContent = "<p>I started out as a GeoJSON " +
-            feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+        var popupContent = '';
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
