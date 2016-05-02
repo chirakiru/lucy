@@ -98,18 +98,18 @@ nav.navbar.navbar-default {
 	position:relative;
 }
 .top-nav ul li a.link-kumya.active {
-    background: #745EC5;
+    background: #88c425;
 }
 .nav > li > a:hover, .nav > li > a:focus,.top-nav ul li a.active{
     background: none;
 }
 /*--drop-down--*/
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #745EC5;
+    background-color: #88c425;
     border: none;
 }
 ul.dropdown-menu li a {
-    color: #745EC5;
+    color: #1b676b;
 	font-size: 1.1em;
 }
 ul.nav.navbar-right {
@@ -124,7 +124,7 @@ ul.nav.navbar-right {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #745EC5;
+    background-color: #88c425;
 }
 /*--//drop-down--*/
 /*--Kumya--*/
@@ -142,7 +142,7 @@ ul.nav.navbar-right {
 	top: 0;
 	right: -2px;
 	z-index: 1;
-	background: #745EC5;
+	background: #88c425;
 	-webkit-transform: translate3d(101%,0,0);
 	transform: translate3d(101%,0,0);
 	-webkit-transition: -webkit-transform 0.5s;
@@ -206,7 +206,7 @@ ul.nav.navbar-right {
 }
 .more a {
     font-size: 1em;
-    color: #745EC5;
+    color: #1b676b;
     padding: 0.8em 2.5em;
     margin: 0 auto;
     position: relative;
@@ -261,10 +261,10 @@ ul.nav.navbar-right {
     color: #fff;
 }
 .more.more2 .button-pipaluk.button--inverted::after {
-	background: #745EC5;
+	background: #1b676b;
 }
 .more.more2 .button-pipaluk::before {
-	border-color:#745EC5;
+	border-color:#1b676b;
 }
 
 /*--//baner--*/
@@ -349,7 +349,7 @@ ul.nav.navbar-right {
 }
 .callbacks_here a:after {
     border-color: #FFFFFF;
-    background-color: #745EC5;
+    background-color: #1b676b;
 }
 /*--//Slider part Ends Here --*/
 /*--welcome--*/
@@ -371,7 +371,7 @@ ul.nav.navbar-right {
 }
 h3.title {
   font-size: 2em;
-  color: #745EC5;
+  color: #1b676b;
 	text-align:center;
 }
 p {
@@ -424,7 +424,7 @@ p {
 	border-radius: 0;
 }
 .tabs .nav-tabs li a:hover {
-    background-color: #745EC5;
+    background-color: #1b676b;
 }
 .tabs .nav-tabs .active .glyphicon {
   color: #333;
@@ -432,7 +432,7 @@ p {
 
 .tabs .nav-tabs > li.active > a, .tabs .nav-tabs > li.active > a:hover, .tabs .nav-tabs > li.active > a:focus {
     border: 0;
-    background-color: #745EC5;
+    background-color: #1b676b;
     color: #fff;
 }
 
@@ -570,7 +570,7 @@ p {
 }
 .footer h3 {
     font-size: 2.5em;
-    color: #745EC5;
+    color: #1b676b;
     margin-bottom: 0.5em;
     font-family: 'Abel-Regular';
 }
@@ -618,7 +618,7 @@ p {
     padding: 5px;
     font-size: 1em;
     border-radius: 2px;
-    background: #745EC5;
+    background: #1b676b;
     visibility: hidden;
     opacity: 0;
     -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -693,7 +693,7 @@ p {
     color: #aaa;
 }
 .footer-copy:hover{
-    border-color: #745EC5;
+    border-color: #1b676b;
 }
 /*--//footer--*/
 /*--about-page--*/
@@ -725,7 +725,7 @@ p {
 .pince-left {
     float: left;
     width: 13%;
-    background-color: #745EC5;
+    background-color: #1b676b;
     text-align: center;
     padding: 1em;
 	-webkit-border-radius: 5px;
@@ -775,7 +775,7 @@ p {
 }
 .testimonials-grid h5 {
     font-size: 1.5em;
-    color: #745EC5;
+    color: #1b676b;
     text-align: center;
 	font-weight:900;
 }
@@ -1039,10 +1039,10 @@ p {
 	color:#000;
 }
 .blog  h4 a:hover {
-	color:#745EC5;
+	color:#1b676b;
 }
 .blog p a {
-	color:#745EC5;
+	color:#1b676b;
 }
 .blog p a:hover{
 	color: #000;
@@ -1062,7 +1062,7 @@ p {
 /*--single-page--*/
 .single-page h3 {
     font-size: 2.5em;
-    color: #745EC5;
+    color: #1b676b;
     margin-bottom: 0.6em;
 }
 .single-page-info a {
@@ -1092,10 +1092,10 @@ p {
 }
 .comment-icons ul li i {
     margin-right: 0.8em;
-    color: #745EC5;
+    color: #1b676b;
 }
 .blog ul li a:hover {
-    color: #745EC5;
+    color: #1b676b;
 }
 .admin-text {
 	background:#f5f5f5;
@@ -1111,7 +1111,7 @@ p {
 .admin-text h5 {
     font-size: 1.4em;
     margin: 0 0 0.5em 0;
-    color: #745EC5;
+    color: #1b676b;
 }
 .admin-text-left {
 	float: left;
@@ -1131,7 +1131,7 @@ p {
     color: #555;
 }
 .admin-text-right span a {
-	color: #745EC5;
+	color: #1b676b;
 }
 .admin-text-right span a:hover{
 	color: #aaa;
@@ -1153,10 +1153,10 @@ p {
   color: #000;
 }
 .related-grids h5  a:hover{
-  color: #745EC5;
+  color: #1b676b;
 }
 a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
-  border-color:#745EC5;
+  border-color:#1b676b;
 }
 .media.response-info {
   margin-top: 2em;
@@ -1173,7 +1173,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	color: #000;
 }
 .response-text-left h5 a:hover{
-	color:#745EC5;
+	color:#1b676b;
 }
 .response-text-right p {
   margin: 0 0 1em;
@@ -1193,7 +1193,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	text-decoration:none;
 }
 .response-text-right ul li a:hover{
-	color:#745EC5;	
+	color:#1b676b;	
 }
 .coment-form {
     margin-top: 4em;
@@ -1248,7 +1248,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 }
 .coment-form input[type="submit"]:hover {
     color: #fff;
-    background: #745EC5;
+    background: #1b676b;
     border-color: #5A37DC;
 }
 .blog-right ul li {
@@ -1264,13 +1264,13 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     font-size: 0.9em;
     color: #999;
     padding: .5em 2em;
-    border: 1px dotted #745EC5;
+    border: 1px dotted #1b676b;
     text-transform: capitalize;
     display: block;
 }
 .blog-tags ul li a:hover {
     text-decoration: none;
-    background: #745EC5;
+    background: #1b676b;
     color: #fff;
 }
 /*--//single-page--*/
@@ -1544,7 +1544,7 @@ h2.typoh2{
 .contact-grid input[type="submit"] {
     outline: none;
     border: none;
-    background: #745EC5;
+    background: #1b676b;
     color: #fff;
     padding: 0.8em 0;
     width: 100%;
@@ -1577,14 +1577,14 @@ h2.typoh2{
 }
 .address ul li i.phon {
     font-size: 1.5em;
-    color: #745EC5;
+    color: #1b676b;
     font-weight: 900;
     font-style: normal;
     font-family: 'Abel-Regular';
 }
 .address ul li i.glyphicon {
     font-size: 1em;
-    color: #745EC5;
+    color: #1b676b;
     vertical-align: inherit;
     margin-right: 0.5em;
 }
@@ -2079,7 +2079,7 @@ ul.nav.navbar-right {
 }
 @media(max-width:767px){
 button.navbar-toggle {
-    background: #745EC5;
+    background: #1b676b;
     border-color: #fff;
 }
 .navbar-toggle .icon-bar {

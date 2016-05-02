@@ -14,18 +14,18 @@ nav.navScroll {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-	color: #745EC5;
+	color: #1b676b;
 	background-color: #fff;
     box-shadow: 0px 2px 5px #B1B1B1;
 }
 nav.navScroll ul li a{
-    color: #745EC5;
+    color: #1b676b;
 }
 nav.navScroll ul.dropdown-menu li a {
-    color: #745EC5;
+    color: #1b676b;
 }
 nav.navScroll .logo a,nav.navScroll .logo a:hover{
-    color: #745EC5;
+    color: #1b676b;
 }
 nav.navScroll li a.active {
     color: #fff;
