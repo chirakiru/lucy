@@ -2,37 +2,37 @@
   { 
     "short_name":"P.M. 10",
     "pollutant": "Particular Menores a 10 µm",
-    "description": "Se denomina PM10 pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro es menor que 10 µm...",
+    "extract": "Se denomina PM10 pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro es menor que 10 µm...",
     "shortcut":"pm10"
   },
   { 
     "short_name":"P.M. 2.5",
     "pollutant": "Particular Menores a 2.5 µm",
-    "description": "Se denomina PM 2.5 a las partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o fracción fina.",
+    "extract": "Se denomina PM 2.5 a las partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o fracción fina.",
     "shortcut":"pm25"
   },
   { 
     "short_name":"O3",
     "pollutant": "Ozono",
-    "description": "Se trata de un contaminante secundario de origen fotoquímico, es decir, no emitido directamente a la atmósfera, sino formado a partir de contaminantes primarios.",
+    "extract": "Se trata de un contaminante secundario de origen fotoquímico, es decir, no emitido directamente a la atmósfera, sino formado a partir de contaminantes primarios.",
     "shortcut":"o3"
   },
   { 
     "short_name":"CO",
     "pollutant": "Monóxido de Carbono",
-    "description": "El monóxido de carbono se forma en la naturaleza mediante la oxidación del metano, que es un gas común producido por la descomposición de la materia orgánica.",
+    "extract": "El monóxido de carbono se forma en la naturaleza mediante la oxidación del metano, que es un gas común producido por la descomposición de la materia orgánica.",
     "shortcut":"co"
   },
   { 
     "short_name":"NO2",
     "pollutant": "Óxido de Nitrógeno",
-    "description": "Los óxidos de nitrógeno se forman cuando un combustible es quemado a altas temperaturas y/o cuando éste contiene compuestos nitrogenados. Las principales fuentes antropogénicas de NOx, son los vehículos automotores, y otras fuentes industriales.",
+    "extract": "Los óxidos de nitrógeno se forman cuando un combustible es quemado a altas temperaturas y/o cuando éste contiene compuestos nitrogenados. Las principales fuentes antropogénicas de NOx, son los vehículos automotores, y otras fuentes industriales.",
     "shortcut":"no2"
   },
   { 
     "short_name":"SO2",
     "pollutant": "Dióxido de azufre",
-    "description": "La exposición a SO2 produce irritación e inflamación aguda o crónica de las mucosas conjuntival y respiratoria. El SO2 puede transformarse en otros productos, tales como partículas finas de sulfato (SO4) y niebla de ácido sulfúrico (H2SO4).",
+    "extract": "La exposición a SO2 produce irritación e inflamación aguda o crónica de las mucosas conjuntival y respiratoria. El SO2 puede transformarse en otros productos, tales como partículas finas de sulfato (SO4) y niebla de ácido sulfúrico (H2SO4).",
     "shortcut":"so2"
   }
 ]

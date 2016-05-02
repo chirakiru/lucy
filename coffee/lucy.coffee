@@ -16,12 +16,12 @@ AddQuote = (->
 build_pollutants_nav = (shortcut, short_name) ->
   "<li><a href='##{shortcut}' aria-controls='#{shortcut}' role='tab' data-toggle='tab'>#{short_name}</a></li>"
 
-build_pollutants_content = (pollutant, shortcut, description) ->
+build_pollutants_content = (pollutant, shortcut, extract) ->
   _link = "/pollutant.html#"+"#{shortcut}"
   "<div class='tab-pane' id='#{shortcut}'>
     <div class='text'>
       <h3 class='title'>#{pollutant}</h3>
-      <p>#{description}</p>
+      <p>#{extract}</p>
       <div class='more more2'>
         <a href='#{_link}' class='button-pipaluk button--inverted'>Leer Más</a>
       </div>  
@@ -34,9 +34,8 @@ global_pollutants = () ->
     div_content = $("#pollutants-content")
     $.map data, (val, i) ->
       div_navs.append build_pollutants_nav(val.shortcut, val.short_name)
-      div_content.append build_pollutants_content(val.pollutant,val.shortcut,val.description)
+      div_content.append build_pollutants_content(val.pollutant,val.shortcut,val.extract)
       $('#pollutants-nav a').click (e) ->
-        console.log 'activate'
         e.preventDefault()
         $(this).tab 'show'
 
