@@ -36,7 +36,8 @@ $.ajax({
             },
             "properties": {
                 "popupContent": station.name + " (" + station.address + ")",
-                value: measure.values[0][1]
+                value: measure.values[0][1],
+                time:  measure.values[0][0],
             },
         }
     })
@@ -135,11 +136,11 @@ $.ajax({
         return this._div;
     };
     info.update = function (props) {
-        this._div.innerHTML = '<h4>Calidad del aire en el área metropolitana</h4><h4>' + moment().locale("es").format("LLLL")  + '</h4>';
+        this._div.innerHTML = '<h4>Calidad del aire en el área metropolitana</h4>';
 
         if(props) {
             if(props.value > 0) {
-                this._div.innerHTML += '<b>' + props.value + ' PM10</b>';
+                this._div.innerHTML += '<h4>' + moment(props.time).locale("es").format("LLLL")  + '</h4><b>' + props.value + ' PM10</b>';
             } else {
                 this._div.innerHTML += 'No disponible / Mantenimiento';
             }
