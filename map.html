@@ -6,10 +6,11 @@
       #mtymap { width:100%;height: 100%; }
     </style>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />  </head>
-
   <body>
     <div id="mtymap"></div>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="geojson.js"></script>
     <script type="text/javascript">
       var map = L.map('mtymap', {
         center: [25.7043,-100.32],
@@ -20,84 +21,43 @@
         attributionControl: false
       });
 
-      //Sierra Real & Sierra Sur, García, N.L.
-      var circle = L.circle([25.7837958,-100.595796], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Ave. Unión y Barcelona, Fraccionamiento Santa Luz, Gral. Escobedo, N. L.
-      var circle = L.circle([25.8011727,-100.3454486], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Talleres
-      var circle = L.circle([25.7574,-100.3685096], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calles Antonio Díaz Soto y Gama esquina con José I. Lugo Col. Unidad Laboral San Nicolás de los Garza, N.L.
-      var circle = L.circle([25.7440401,-100.2537595], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calle Mariano Abasolo, entre Escobedo y Porfirio Díaz, Centro, Apodaca, N. L.
-      var circle = L.circle([25.7758939,-100.1903335], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calles Guerrero y Juárez, Centro de Santa Catarina, Santa Catarina, N.L.
-      var circle = L.circle([25.6750644,-100.4632662], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Interiores de Agua y Drenaje de Mty., Calles 5 de mayo y México, Col. Obispado, Monterrey, N.L.
-      var circle = L.circle([25.6745505,-100.339758], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Gral. Garza Ayala y Diego Saldivar, Fraccionamiento Los Sauces, San Pedro Garza García, N.L.
-      var circle = L.circle([25.6642588,-100.4137425], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Interiores Parque Zoológico "La Pastora", Av. Pablo Livas y Av. Eloy Cavazos, Guadalupe N.L.
-      var circle = L.circle([25.6663163,-100.2601429], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Lazaro Garza Ayala # 215, cruz con Guerrero, Centro de Juarez, N. L
-      var circle = L.circle([25.6456731,-100.0952963], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      // L.marker([25.7443232,-100.291435]).addTo(map)
-      //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      //     .openPopup();
-    </script>
 
+      function onEachFeature(feature, layer) {
+        var popupContent = "<p>I started out as a GeoJSON " +
+            feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+
+        if (feature.properties && feature.properties.popupContent) {
+          popupContent += feature.properties.popupContent;
+        }
+        layer.bindPopup(popupContent);
+      }
+
+      L.geoJson([monitoringStations], {
+        style: function (feature) {
+          return feature.properties && feature.properties.style;
+        },
+        onEachFeature: onEachFeature,
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            radius: 18,
+            fillColor: '#f03',
+            color: "red",
+            fillOpacity: 0.5
+          });
+        }
+      }).addTo(map);
+
+      // $.getJSON("http://40.84.189.192:8086/query", {
+      //   db: "airquality",
+      //   epoch:"ms",
+      //   q: "SELECT value FROM airquality..air where pollutant = 'PM10' GROUP BY station, pollutant order by time desc limit 1"
+      // }, function( data ) {
+      //   console.log(data)
+      // })
+    </script>
   </body>
 </html>
