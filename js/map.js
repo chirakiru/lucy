@@ -35,7 +35,8 @@ $.ajax({
                 "coordinates": station.coordinates
             },
             "properties": {
-                "popupContent": station.name + " (" + station.address + ")",
+                "name": station.name  + ' #' + station.id,
+                "popupContent": station.name + ' #' + station.id + " <br/>" + station.address,
                 value: measure.values[0][1],
                 time:  measure.values[0][0],
             },
@@ -65,8 +66,7 @@ $.ajax({
     var geojson;
 
     function onEachFeature(feature, layer) {
-        var popupContent = "<p>I started out as a GeoJSON " +
-            feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+        var popupContent = '';
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
@@ -86,7 +86,16 @@ $.ajax({
                d > 50   ? '#FFFF00':
                d > 0    ? '#2ec800':
                           'rgb(80, 80, 80)';
-      }
+    }
+
+    function getLabel(d) {
+        return d > 200  ? 'Extremadamente mala':
+               d > 150  ? 'Muy mala':
+               d > 100  ? 'Mala':
+               d > 50   ? 'Regular':
+               d > 0    ? 'Buena':
+                          'No disponible';
+    }
 
     function highlightFeature(e) {
         var layer = e.target;
@@ -140,7 +149,9 @@ $.ajax({
 
         if(props) {
             if(props.value > 0) {
-                this._div.innerHTML += '<h4>' + moment(props.time).locale("es").format("LLLL")  + '</h4><b>' + props.value + ' PM10</b>';
+                this._div.innerHTML += '<h4>' + props.name + '</h4>' +
+                '<h4>' + moment(props.time).locale("es").utcOffset(0).format("LLLL")  +'</h4>' +
+                '<b>' + props.value + ' PM10</b>';
             } else {
                 this._div.innerHTML += 'No disponible / Mantenimiento';
             }
@@ -154,16 +165,26 @@ $.ajax({
     /* Control esquina inferior derecha */
     var legend = L.control({ position: 'bottomright' });
     legend.onAdd = function (map) {
-        var div    = L.DomUtil.create('div', 'info legend'),
-            grades = [1, 50, 100, 150, 200],
-            labels = [];
 
-        // loop para crear los rangos
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = [1, 50, 100, 150, 200],
+            labels = [],
+            from, to;
+
         for (var i = 0; i < grades.length; i++) {
-            div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(
+                '<i title="' + getLabel(from + 1) + '" style="background:' + getColor(from + 1) + '"></i> ' +
+                from + (to ? '&ndash;' + to : '+'));
         }
+        labels.push('<i style="background:' + getColor(0) + '"></i>' + getLabel(0))
+
+        div.innerHTML = labels.join('<br>');
         return div;
     };
+
     legend.addTo(map);
 
 
