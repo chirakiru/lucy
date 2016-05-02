@@ -3,7 +3,34 @@
   <head>
     <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
+
       #mtymap { width:100%;height: 100%; }
+
+      .info {
+          padding: 6px 8px;
+          font: 14px/16px Arial, Helvetica, sans-serif;
+          background: white;
+          background: rgba(255,255,255,0.8);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+
+      .info h4 {
+          margin: 0 0 5px;
+          color: #777;
+      }
+
+      .legend {
+          line-height: 18px;
+          color: #555;
+      }
+      .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+      }
     </style>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />  </head>
   <body>
@@ -25,6 +52,7 @@
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
+      var geojson;
 
       function onEachFeature(feature, layer) {
         var popupContent = "<p>I started out as a GeoJSON " +
@@ -34,6 +62,11 @@
           popupContent += feature.properties.popupContent;
         }
         layer.bindPopup(popupContent);
+
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight
+        });
       }
 
       function getColor(d) {
@@ -45,7 +78,28 @@
                             '#b3b3b3';
       }
 
-      L.geoJson([monitoringStations], {
+      function highlightFeature(e) {
+          var layer = e.target;
+
+          layer.setStyle({
+              weight: 5,
+              color: '#666',
+              dashArray: '',
+              fillOpacity: 0.7
+          });
+
+          if (!L.Browser.ie && !L.Browser.opera) {
+              layer.bringToFront();
+          }
+          info.update(layer.feature.properties);
+      }
+
+      function resetHighlight(e) {
+          geojson.resetStyle(e.target);
+          info.update();
+      }
+
+      geojson = L.geoJson([monitoringStations], {
         style: function (feature) {
           return feature.properties && feature.properties.style;
         },
@@ -60,6 +114,51 @@
           });
         }
       }).addTo(map);
+
+      var info = L.control();
+
+      info.onAdd = function (map) {
+          this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+          this.update();
+          return this._div;
+      };
+
+      // method that we will use to update the control based on feature properties passed
+      info.update = function (props) {
+          this._div.innerHTML = '<h4>IMECA</h4>' +  (props ?
+              '<b>' + props.popupContent + '</b><br />' + props.value + ' IMECA'
+              : 'Pasa el cursor por una estación');
+      };
+
+      info.addTo(map);
+
+      var legend = L.control({position: 'bottomright'});
+
+      legend.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'info legend'),
+              grades = [1, 50, 100, 150, 200],
+              labels = [];
+
+          // loop through our density intervals and generate a label with a colored square for each interval
+          for (var i = 0; i < grades.length; i++) {
+              div.innerHTML +=
+                  '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+          }
+          return div;
+      };
+
+      legend.addTo(map);
+
+      var legendlogo = L.control({position: 'bottomleft'});
+
+      legendlogo.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'info legend');
+          div.innerHTML += "<h4>Un respiro a mi ciudad</h4>";
+          return div;
+      };
+
+      legendlogo.addTo(map);
 
       // $.getJSON("http://40.84.189.192:8086/query", {
       //   db: "airquality",
