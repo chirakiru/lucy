@@ -27,7 +27,7 @@ build_pollutants_nav = function(shortcut, short_name) {
 build_pollutants_content = function(pollutant, shortcut, description) {
   var _link;
   _link = "/pollutant.html#" + ("" + shortcut);
-  return "<div class='tab-pane' id='" + shortcut + "'> <div class='text'> <h3 class='title'>" + pollutant + "</h3> <p>" + description + "</p> <div class='more more2'> <a href='" + _link + "' class='button-pipaluk button--inverted'>Read More</a> </div> </div> </div>";
+  return "<div class='tab-pane' id='" + shortcut + "'> <div class='text'> <h3 class='title'>" + pollutant + "</h3> <p>" + description + "</p> <div class='more more2'> <a href='" + _link + "' class='button-pipaluk button--inverted'>Leer Más</a> </div> </div> </div>";
 };
 
 global_pollutants = function() {
