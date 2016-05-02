@@ -1,0 +1,62 @@
+[
+    {
+        "id": 6,
+        "coordinates": [-100.595796, 25.7837958],
+        "name": "Estación Noroeste2",
+        "address": "Sierra Real y Sierra García, Fraccionamiento Sierra Real, García, N. L."
+    },
+    {
+        "id": 7,
+        "coordinates": [-100.3454486, 25.8011727],
+        "name": "Estación Norte",
+        "address": "Ave. Unión y Barcelona, Fraccionamiento Santa Luz, Gral. Escobedo, N. L."
+    },
+    {
+        "id": 1,
+        "coordinates": [-100.3685096,25.7574],
+        "name": "Estación Noroeste",
+        "address": "Interiores de los talleres de Metrorrey, Av. Solidaridad, Col. San Bernabé, Monterrey, N.L."
+    },
+    {
+        "id": 4,
+        "coordinates": [-100.2537595,25.7440401],
+        "name": "Estación Noreste",
+        "address": "Calles Antonio Díaz Soto y Gama esquina con José I. Lugo Col. Unidad Laboral San Nicolás de los Garza, N.L."
+    },
+    {
+        "id": 8,
+        "coordinates": [-100.1903335,25.7758939],
+        "name": "Estación Noreste2",
+        "address": "Calle Mariano Abasolo, entre Escobedo y Porfirio Díaz, Centro, Apodaca, N. L."
+    },
+    {
+        "id": 2,
+        "coordinates": [-100.4632662,25.6750644],
+        "name": "Estación Suroeste",
+        "address": "Calles Guerrero y Juárez, Centro de Santa Catarina, Santa Catarina, N.L."
+    },
+    {
+        "id": 3,
+        "coordinates": [-100.339758,25.6745505],
+        "name": "Estación Centro",
+        "address": "Interiores de Agua y Drenaje de Mty., Calles 5 de mayo y México, Col. Obispado, Monterrey, N.L."
+    },
+    {
+        "id": 10,
+        "coordinates": [-100.4137425,25.6642588],
+        "name": "Estación Suroeste2",
+        "address": "Gral. Garza Ayala y Diego Saldivar, Fraccionamiento Los Sauces, San Pedro Garza García, N.L."
+    },
+    {
+        "id": 5,
+        "coordinates": [-100.2601429,25.6663163],
+        "name": "Estación Sureste",
+        "address": "Interiores Parque Zoológico \"La Pastora\", Av. Pablo Livas y Av. Eloy Cavazos, Guadalupe N.L."
+    },
+    {
+        "id": 11,
+        "coordinates": [-100.0952963,25.6456731],
+        "name": "Estación Sureste2",
+        "address": "Lazaro Garza Ayala # 215, cruz con Guerrero, Centro de Juarez, N. L"
+    }
+]
