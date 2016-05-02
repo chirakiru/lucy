@@ -8,7 +8,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Sierra Real, Sierra Sur, García, N.L."
+                "popupContent": "Sierra Real, Sierra Sur, García, N.L.",
+                value: 101
             },
             "id": 6
         },
@@ -19,7 +20,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Ave. Unión y Barcelona, Fraccionamiento Santa Luz, Gral. Escobedo, N. L."
+                "popupContent": "Ave. Unión y Barcelona, Fraccionamiento Santa Luz, Gral. Escobedo, N. L.",
+                value: 51
             },
             "id": 7
         },
@@ -30,7 +32,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Talleres"
+                "popupContent": "Talleres",
+                value: 151
             },
             "id": 1
         },
@@ -41,7 +44,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Calles Antonio Díaz Soto y Gama esquina con José I. Lugo Col. Unidad Laboral San Nicolás de los Garza, N.L."
+                "popupContent": "Calles Antonio Díaz Soto y Gama esquina con José I. Lugo Col. Unidad Laboral San Nicolás de los Garza, N.L.",
+                value: 201
             },
             "id": 4
         },
@@ -52,7 +56,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Calle Mariano Abasolo, entre Escobedo y Porfirio Díaz, Centro, Apodaca, N. L."
+                "popupContent": "Calle Mariano Abasolo, entre Escobedo y Porfirio Díaz, Centro, Apodaca, N. L.",
+                value: 0
             },
             "id": 8
         },
@@ -63,7 +68,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Calles Guerrero y Juárez, Centro de Santa Catarina, Santa Catarina, N.L."
+                "popupContent": "Calles Guerrero y Juárez, Centro de Santa Catarina, Santa Catarina, N.L.",
+                value: 43
             },
             "id": 2
         },
@@ -74,7 +80,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Interiores de Agua y Drenaje de Mty., Calles 5 de mayo y México, Col. Obispado, Monterrey, N.L."
+                "popupContent": "Interiores de Agua y Drenaje de Mty., Calles 5 de mayo y México, Col. Obispado, Monterrey, N.L.",
+                value: 43
             },
             "id": 3
         },
@@ -85,7 +92,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Gral. Garza Ayala y Diego Saldivar, Fraccionamiento Los Sauces, San Pedro Garza García, N.L."
+                "popupContent": "Gral. Garza Ayala y Diego Saldivar, Fraccionamiento Los Sauces, San Pedro Garza García, N.L.",
+                value: 43
             },
             "id": 10
         },
@@ -96,7 +104,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Interiores Parque Zoológico \"La Pastora\", Av. Pablo Livas y Av. Eloy Cavazos, Guadalupe N.L."
+                "popupContent": "Interiores Parque Zoológico \"La Pastora\", Av. Pablo Livas y Av. Eloy Cavazos, Guadalupe N.L.",
+                value: 43
             },
             "id": 5
         },
@@ -107,7 +116,8 @@ var monitoringStations = {
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Lazaro Garza Ayala # 215, cruz con Guerrero, Centro de Juarez, N. L"
+                "popupContent": "Lazaro Garza Ayala # 215, cruz con Guerrero, Centro de Juarez, N. L",
+                value: 43
             },
             "id": 11
         }
