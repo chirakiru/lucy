@@ -3,13 +3,41 @@
   <head>
     <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
+
       #mtymap { width:100%;height: 100%; }
+
+      .info {
+          padding: 6px 8px;
+          font: 14px/16px Arial, Helvetica, sans-serif;
+          background: white;
+          background: rgba(255,255,255,0.8);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+
+      .info h4 {
+          margin: 0 0 5px;
+          color: #777;
+      }
+
+      .legend {
+          line-height: 18px;
+          color: #555;
+      }
+      .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+      }
     </style>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />  </head>
-
   <body>
     <div id="mtymap"></div>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="geojson.js"></script>
     <script type="text/javascript">
       var map = L.map('mtymap', {
         center: [25.7043,-100.32],
@@ -20,84 +48,125 @@
         attributionControl: false
       });
 
-      //Sierra Real & Sierra Sur, García, N.L.
-      var circle = L.circle([25.7837958,-100.595796], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Ave. Unión y Barcelona, Fraccionamiento Santa Luz, Gral. Escobedo, N. L.
-      var circle = L.circle([25.8011727,-100.3454486], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Talleres
-      var circle = L.circle([25.7574,-100.3685096], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calles Antonio Díaz Soto y Gama esquina con José I. Lugo Col. Unidad Laboral San Nicolás de los Garza, N.L.
-      var circle = L.circle([25.7440401,-100.2537595], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calle Mariano Abasolo, entre Escobedo y Porfirio Díaz, Centro, Apodaca, N. L.
-      var circle = L.circle([25.7758939,-100.1903335], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Calles Guerrero y Juárez, Centro de Santa Catarina, Santa Catarina, N.L.
-      var circle = L.circle([25.6750644,-100.4632662], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Interiores de Agua y Drenaje de Mty., Calles 5 de mayo y México, Col. Obispado, Monterrey, N.L.
-      var circle = L.circle([25.6745505,-100.339758], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Gral. Garza Ayala y Diego Saldivar, Fraccionamiento Los Sauces, San Pedro Garza García, N.L.
-      var circle = L.circle([25.6642588,-100.4137425], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Interiores Parque Zoológico "La Pastora", Av. Pablo Livas y Av. Eloy Cavazos, Guadalupe N.L.
-      var circle = L.circle([25.6663163,-100.2601429], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      // Lazaro Garza Ayala # 215, cruz con Guerrero, Centro de Juarez, N. L
-      var circle = L.circle([25.6456731,-100.0952963], 900, {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5
-      }).addTo(map);
-
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      // L.marker([25.7443232,-100.291435]).addTo(map)
-      //     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      //     .openPopup();
-    </script>
+      var geojson;
 
+      function onEachFeature(feature, layer) {
+        var popupContent = "<p>I started out as a GeoJSON " +
+            feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+
+        if (feature.properties && feature.properties.popupContent) {
+          popupContent += feature.properties.popupContent;
+        }
+        layer.bindPopup(popupContent);
+
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight
+        });
+      }
+
+      function getColor(d) {
+          return d > 200  ? '#6b006d':
+                 d > 150  ? '#f50000':
+                 d > 100  ? '#f88900':
+                 d > 50   ? '#FFFF00':
+                 d > 0    ? '#2ec800':
+                            '#b3b3b3';
+      }
+
+      function highlightFeature(e) {
+          var layer = e.target;
+
+          layer.setStyle({
+              weight: 5,
+              color: '#666',
+              dashArray: '',
+              fillOpacity: 0.7
+          });
+
+          if (!L.Browser.ie && !L.Browser.opera) {
+              layer.bringToFront();
+          }
+          info.update(layer.feature.properties);
+      }
+
+      function resetHighlight(e) {
+          geojson.resetStyle(e.target);
+          info.update();
+      }
+
+      geojson = L.geoJson([monitoringStations], {
+        style: function (feature) {
+          return feature.properties && feature.properties.style;
+        },
+        onEachFeature: onEachFeature,
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            radius: 18,
+            fillColor: getColor(feature.properties.value),
+            color: getColor(feature.properties.value),
+            fillOpacity: 0.7,
+            weight: 2
+          });
+        }
+      }).addTo(map);
+
+      var info = L.control();
+
+      info.onAdd = function (map) {
+          this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+          this.update();
+          return this._div;
+      };
+
+      // method that we will use to update the control based on feature properties passed
+      info.update = function (props) {
+          this._div.innerHTML = '<h4>IMECA</h4>' +  (props ?
+              '<b>' + props.popupContent + '</b><br />' + props.value + ' IMECA'
+              : 'Pasa el cursor por una estación');
+      };
+
+      info.addTo(map);
+
+      var legend = L.control({position: 'bottomright'});
+
+      legend.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'info legend'),
+              grades = [1, 50, 100, 150, 200],
+              labels = [];
+
+          // loop through our density intervals and generate a label with a colored square for each interval
+          for (var i = 0; i < grades.length; i++) {
+              div.innerHTML +=
+                  '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+          }
+          return div;
+      };
+
+      legend.addTo(map);
+
+      var legendlogo = L.control({position: 'bottomleft'});
+
+      legendlogo.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'info legend');
+          div.innerHTML += "<h4>Un respiro a mi ciudad</h4>";
+          return div;
+      };
+
+      legendlogo.addTo(map);
+
+      // $.getJSON("http://40.84.189.192:8086/query", {
+      //   db: "airquality",
+      //   epoch:"ms",
+      //   q: "SELECT value FROM airquality..air where pollutant = 'PM10' GROUP BY station, pollutant order by time desc limit 1"
+      // }, function( data ) {
+      //   console.log(data)
+      // })
+    </script>
   </body>
 </html>
