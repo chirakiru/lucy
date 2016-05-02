@@ -23,7 +23,7 @@ build_pollutants_content = (pollutant, shortcut, description) ->
       <h3 class='title'>#{pollutant}</h3>
       <p>#{description}</p>
       <div class='more more2'>
-        <a href='#{_link}' class='button-pipaluk button--inverted'>Read More</a>
+        <a href='#{_link}' class='button-pipaluk button--inverted'>Leer Más</a>
       </div>  
     </div>
   </div>"
