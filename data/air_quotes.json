@@ -1,22 +1,22 @@
 [
   { 
-    "author": "Jacques Yves Cousteau",
-    "quote": "El agua y el aire, los dos fluidos esenciales de los que depende la vida, se han convertido en los basureros del planeta"
+    "author": "Jacques-Yves Cousteau",
+    "quote": "El agua y el aire, los dos fluidos esenciales de los que depende la vida, se han convertido en los basureros del planeta."
   },
   {
     "author": "Al Gore",
     "quote": "La contaminación nunca debería ser el precio de la prosperidad."
   },
   {
-    "author": "Carl Sagan",
-    "quote": "Cualquier cosa en la que estés interesado no ocurrirá si no puedes respirar o beber. Haga algo."
-  },
-  {
     "author": "Amit Abraham",
-    "quote": "El amor esta en el aire pero el aire esta altamente contaminado."
+    "quote": "El amor está en el aire, pero el aire está altamente contaminado."
   },
   {
     "author": "Robert Orben",
-    "quote": "Hay tanta contaminación el aire que si no fuese por nuestros pulmones, no habría lugar para colocarla."
+    "quote": "Hay tanta contaminación en el aire que si no fuese por nuestros pulmones, no habría lugar para colocarla."
+  },
+  {
+    "author": "Lester Brown",
+    "quote": "En la Ciudad de México, Teherán, Calcuta, Bangkok, Shanghái, y cientos de otras ciudades, el aire ya no es seguro para respirar. En algunas ciudades, el aire está tan contaminado que respirar es equivalente a fumar dos cajetillas de cigarros al día."
   }
 ]
