@@ -1,8 +1,10 @@
-var coffee = require('gulp-coffee');
-var gulp   = require('gulp');
-var gutil  = require('gulp-util');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload
+var coffee  = require('gulp-coffee'),
+    gulp    = require('gulp'),
+    gutil   = require('gulp-util'),
+stripDebug  = require('gulp-strip-debug'),
+          $ = require('gulp-load-plugins')(),
+browserSync = require('browser-sync'),
+     reload = browserSync.reload;
 
 // Static server
 gulp.task('watch', function() {
@@ -20,4 +22,41 @@ gulp.task('coffee', function() {
   gulp.src('./coffee/*.coffee')
     .pipe(coffee({bare: true}).on('error', gutil.log))
     .pipe(gulp.dest('./js/'));
+});
+
+gulp.task('build', ['html', 'css', 'fonts', 'images', 'data'], function() {
+    gulp.start('compress');
+})
+
+gulp.task('compress', function() {
+    gulp.src(['src/js/*.js'])
+        .pipe(stripDebug())
+        .pipe($.uglify())
+        .pipe(gulp.dest('dist/js/'));
+});
+
+gulp.task('html', [], function() {
+    return gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'))
+});
+
+gulp.task('css', [], function() {
+    return gulp.src('src/css/*.css')
+        .pipe($.minifyCss())
+        .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('fonts', [], function() {
+    return gulp.src('src/fonts/*')
+        .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('images', [], function() {
+    return gulp.src('src/images/*')
+        .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('data', [], function() {
+    return gulp.src('src/data/*')
+        .pipe(gulp.dest('dist/data'))
 });
