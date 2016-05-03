@@ -54,12 +54,13 @@ $.ajax({
         minZoom: 11,
         maxZoom: 13,
         scrollWheelZoom: false,
-        attributionControl: false
     });
 
     // Mapa en grises
     L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
+          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Datos de calidad del aire &copy; <a href="http://aire.nl.gob.mx/sima/">SIMA</a>'
     }).addTo(map);
 
     // Variable para conservar el estado de la capa de geoJson
