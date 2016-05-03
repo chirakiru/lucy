@@ -1,14 +1,14 @@
 [
   { 
     "short_name":"P.M. 10",
-    "pollutant": "Particular Menores a 10 µm",
-    "extract": "Se denomina PM10 pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro es menor que 10 µm...",
+    "pollutant": "Partículas menores a 10 µm",
+    "extract": "Se denomina PM10 a las partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera y cuyo diámetro es menor que 10 µm...",
     "shortcut":"pm10"
   },
   { 
     "short_name":"P.M. 2.5",
-    "pollutant": "Particular Menores a 2.5 µm",
-    "extract": "Se denomina PM 2.5 a las partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o fracción fina.",
+    "pollutant": "Partículas menores a 2.5 µm",
+    "extract": "Se denomina PM 2.5 a las partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o de fracción fina.",
     "shortcut":"pm25"
   },
   { 
@@ -19,14 +19,14 @@
   },
   { 
     "short_name":"CO",
-    "pollutant": "Monóxido de Carbono",
+    "pollutant": "Monóxido de carbono",
     "extract": "El monóxido de carbono se forma en la naturaleza mediante la oxidación del metano, que es un gas común producido por la descomposición de la materia orgánica.",
     "shortcut":"co"
   },
   { 
     "short_name":"NO2",
     "pollutant": "Óxido de Nitrógeno",
-    "extract": "Los óxidos de nitrógeno se forman cuando un combustible es quemado a altas temperaturas y/o cuando éste contiene compuestos nitrogenados. Las principales fuentes antropogénicas de NOx, son los vehículos automotores, y otras fuentes industriales.",
+    "extract": "Los óxidos de nitrógeno se forman cuando un combustible es quemado a altas temperaturas o cuando éste contiene compuestos nitrogenados. Las principales fuentes antropogénicas de NO2 son los vehículos automotores y otras fuentes industriales.",
     "shortcut":"no2"
   },
   { 
