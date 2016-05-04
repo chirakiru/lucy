@@ -98,14 +98,14 @@ nav.navbar.navbar-default {
 	position:relative;
 }
 .top-nav ul li a.link-kumya.active {
-    background: #88c425;
+    background: #00B4CC;
 }
 .nav > li > a:hover, .nav > li > a:focus,.top-nav ul li a.active{
     background: none;
 }
 /*--drop-down--*/
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #88c425;
+    background-color: #00B4CC;
     border: none;
 }
 ul.dropdown-menu li a {
@@ -124,7 +124,7 @@ ul.nav.navbar-right {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #88c425;
+    background-color: #00B4CC;
 }
 /*--//drop-down--*/
 /*--Kumya--*/
@@ -142,7 +142,7 @@ ul.nav.navbar-right {
 	top: 0;
 	right: -2px;
 	z-index: 1;
-	background: #88c425;
+	background: #00B4CC;
 	-webkit-transform: translate3d(101%,0,0);
 	transform: translate3d(101%,0,0);
 	-webkit-transition: -webkit-transform 0.5s;

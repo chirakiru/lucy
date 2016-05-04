@@ -10,7 +10,7 @@ browserSync = require('browser-sync'),
 gulp.task('watch', function() {
     browserSync({
         server: {
-            baseDir: "./"
+            baseDir: "./src"
         }
     });
 
