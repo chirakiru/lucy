@@ -170,6 +170,7 @@ $.ajax({
         var div = L.DomUtil.create('div', 'info legend'),
             grades = [1, 50, 100, 150, 200],
             labels = [],
+            levels = ["Buena", "Regular", "Mala", "Muy Mala", "Extremadamente Mala"],
             from, to;
 
         for (var i = 0; i < grades.length; i++) {
@@ -178,7 +179,7 @@ $.ajax({
 
             labels.push(
                 '<i title="' + getLabel(from + 1) + '" style="background:' + getColor(from + 1) + '"></i> ' +
-                from + (to ? '&ndash;' + to : '+'));
+                from + (to ? '&ndash;' + to : '+') + ' (' + levels[i] + ')') ;
         }
         labels.push('<i style="background:' + getColor(0) + '"></i>' + getLabel(0))
 
