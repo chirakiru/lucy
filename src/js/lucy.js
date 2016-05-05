@@ -20,14 +20,18 @@ AddQuote = (function() {
   };
 })();
 
-build_pollutants_nav = function(shortcut, short_name) {
-  return "<li><a href='#" + shortcut + "' aria-controls='" + shortcut + "' role='tab' data-toggle='tab'>" + short_name + "</a></li>";
+build_pollutants_nav = function(shortcut, short_name, index) {
+  var cls;
+  console.log(index);
+  cls = index === 0 ? 'active' : '';
+  return "<li class='" + cls + "'><a href='#" + shortcut + "' aria-controls='" + shortcut + "' role='tab' data-toggle='tab'>" + short_name + "</a></li>";
 };
 
-build_pollutants_content = function(pollutant, shortcut, extract) {
-  var _link;
+build_pollutants_content = function(pollutant, shortcut, extract, index) {
+  var _link, cls;
+  cls = index === 0 ? 'active' : '';
   _link = "/pollutant.html#" + ("" + shortcut);
-  return "<div class='tab-pane' id='" + shortcut + "'> <div class='text'> <h3 class='title'>" + pollutant + "</h3> <p>" + extract + "</p> <div class='more more2'> <a href='" + _link + "' class='button-pipaluk button--inverted'>Leer Más</a> </div> </div> </div>";
+  return "<div class='tab-pane " + cls + "' id='" + shortcut + "'> <div class='text'> <h3 class='title'>" + pollutant + "</h3> <p>" + extract + "</p> <div class='more more2'> <a href='" + _link + "' class='button-pipaluk button--inverted'>Leer Más</a> </div> </div> </div>";
 };
 
 global_pollutants = function() {
@@ -36,8 +40,8 @@ global_pollutants = function() {
     div_navs = $("#pollutants-nav ul");
     div_content = $("#pollutants-content");
     return $.map(data, function(val, i) {
-      div_navs.append(build_pollutants_nav(val.shortcut, val.short_name));
-      div_content.append(build_pollutants_content(val.pollutant, val.shortcut, val.extract));
+      div_navs.append(build_pollutants_nav(val.shortcut, val.short_name, i));
+      div_content.append(build_pollutants_content(val.pollutant, val.shortcut, val.extract, i));
       return $('#pollutants-nav a').click(function(e) {
         e.preventDefault();
         return $(this).tab('show');
