@@ -664,6 +664,13 @@ p {
     content: '';
     background-position:0px -65px;
 }
+.footer-bottom a.ico-twitter {
+    content: '';
+    background:url(../images/twitter-square-logo.png)no-repeat 3px 1px;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
 /*--Icons--*/
 .footer a.footer-img {
     display: inline-block;
