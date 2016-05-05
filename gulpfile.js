@@ -14,14 +14,14 @@ gulp.task('watch', function() {
         }
     });
 
-    gulp.watch('./coffee/*.coffee', ['coffee'])
-    gulp.watch('./js/*.js').on('change', reload)
+    gulp.watch('./src/coffee/*.coffee', ['coffee'])
+    gulp.watch('./src/js/*.js').on('change', reload)
 });
 
 gulp.task('coffee', function() {
-  gulp.src('./coffee/*.coffee')
+  gulp.src('./src/coffee/*.coffee')
     .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('./src/js/'));
 });
 
 gulp.task('build', ['html', 'css', 'fonts', 'images', 'data'], function() {

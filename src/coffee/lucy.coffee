@@ -13,12 +13,15 @@ AddQuote = (->
   add: _initialize
 )()
 
-build_pollutants_nav = (shortcut, short_name) ->
-  "<li><a href='##{shortcut}' aria-controls='#{shortcut}' role='tab' data-toggle='tab'>#{short_name}</a></li>"
+build_pollutants_nav = (shortcut, short_name, index) ->
+  console.log index
+  cls = if index == 0 then 'active' else ''
+  "<li class='#{cls}'><a href='##{shortcut}' aria-controls='#{shortcut}' role='tab' data-toggle='tab'>#{short_name}</a></li>"
 
-build_pollutants_content = (pollutant, shortcut, extract) ->
+build_pollutants_content = (pollutant, shortcut, extract, index) ->
+  cls = if index == 0 then 'active' else ''
   _link = "/pollutant.html#"+"#{shortcut}"
-  "<div class='tab-pane' id='#{shortcut}'>
+  "<div class='tab-pane #{cls}' id='#{shortcut}'>
     <div class='text'>
       <h3 class='title'>#{pollutant}</h3>
       <p>#{extract}</p>
@@ -33,8 +36,8 @@ global_pollutants = () ->
     div_navs = $("#pollutants-nav ul")
     div_content = $("#pollutants-content")
     $.map data, (val, i) ->
-      div_navs.append build_pollutants_nav(val.shortcut, val.short_name)
-      div_content.append build_pollutants_content(val.pollutant,val.shortcut,val.extract)
+      div_navs.append build_pollutants_nav(val.shortcut, val.short_name, i)
+      div_content.append build_pollutants_content(val.pollutant,val.shortcut,val.extract, i)
       $('#pollutants-nav a').click (e) ->
         e.preventDefault()
         $(this).tab 'show'
