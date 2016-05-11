@@ -14,10 +14,10 @@
     "pollutant": "Partículas menores a 2.5 µm",
     "extract": "Se denomina PM 2.5 a las partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o de fracción fina.",
     "shortcut":"pm25",
-    "description":"",
-    "origin":"",
-    "health":"",
-    "references":[]
+    "description":"<p>Las PM<sub>2.5</sub> se pueden definir como aquellas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento ó polen, dispersas en la atmósfera, y cuyo diámetro es menor a 2.5µm (es decir, son 100 veces más delgadas que un cabello humano).<p> A pesar de que no son medidas en muchas ciudades, parecen ser un mejor indicador de la contaminación urbana que las que se venían utilizando hasta ahora, las PM<sub>10</sub>. Esto es debido a que, por un lado, su origen es antropogénico en una alta proporción, puesto que las PM<sub>2,5</sub> en buena medida provienen de las emisiones de los vehículos diesel en la ciudad. Por otro lado, los efectos que tienen sobre nuestra salud son muy graves, por su gran capacidad de penetración en las vías respiratorias.</p>",
+    "origin":"<p>Las fuentes de partículas finas, incluyen todo tipo de actividades de combustión (automóviles, plantas de energía, leña, etc.) y ciertos procesos industriales. Se forman indirectamente cuando los gases procedentes de la quema de combustibles reaccionan con la luz solar y vapor de agua. Pueden ser el resultado de la combustión en los vehículos de motor, en las centrales eléctricas, y en otros procesos industriales.</p>",
+    "health":"<p>Los efectos que las partículas causan en la salud de las personas han estado históricamente asociados a la exacerbación de enfermedades de tipo respiratorio, tales como la bronquitis, y más recientemente también se han analizado y demostrado sus efectos sobre dolencias de tipo cardiovascular.</p><p>Los últimos trabajos científicos sugieren que este tipo de contaminación, y particularmente las partículas procedentes del tráfico urbano, está asociado con incrementos en la morbi-mortalidad de la población expuesta y al creciente desarrollo del asma y alergias entre la población infantil. En el caso de las PM<sub>2.5</sub>, su tamaño hace que sean 100% respirables ya que viajan profundamente en los pulmones, penetrando en el aparato respiratorio y depositándose en los alvéolos pulmonares, incluso pueden llegar al torrente sanguíneo. Además estas partículas de menor tamaño están compuestas por elementos que son más tóxicos (como metales pesados y compuestos orgánicos) que los que componen, en general, las PM<sub>10</sub>.</p>",
+    "references":[{"title":"Ecologistas en Acción.","link":"http://www.ecologistasenaccion.org/article17842.html"},{"title":"US Environmental Protection Agency","link":"https://www3.epa.gov/pmdesignations/faq.htm#1"}]
   },
   { 
     "short_name":"O3",

@@ -56,12 +56,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-right">
-                <li><a href="../index.html" class="link-kumya"><span data-letters="Inicio">Inicio</span></a></li>
                 <li><a href="../map.html" class="link-kumya"><span data-letters="Mapa">Mapa</span></a></li>  
-                <li><a href="../pollutant.html" class="link-kumya active scroll"><span data-letters="Contaminantes">Contaminantes</span></a></li>
-                <li><a href="../blog.html" class="link-kumya"><span data-letters="Blog">Blog</span></a></li>   
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Estaciones">Estaciones</span></a></li>
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Contactanos">Contáctanos</span></a></li>
+                <li><a href="#" class="link-kumya dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Contaminantes">Contaminantes</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/pollutants/pm10.html">PM 10</a></li>
+                    <li><a href="/pollutants/pm25.html">PM 2.5</a></li>
+                    <li><a href="/pollutants/o3.html">Ozono</a></li>
+                    <li><a href="/pollutants/co.html">Monóxido de Carbono</a></li>
+                    <li><a href="/pollutants/no2.html">Óxido de Nitrógeno</a></li>
+                    <li><a href="/pollutants/so2.html">Dióxido de azufre</a></li>
+                  </ul>
+                </li>
+              </ul> 
               </ul> 
               <div class="clearfix"> </div>
             </div>
@@ -69,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </nav>
       </div>  
       <div class="banner-text">
-         <h2>Dióxido de azufre</h2> 
+         <h2 style='font-size: 4em;'>Dióxido de azufre</h2> 
       </div>
       <!--//navigation--> 
     </div>
@@ -88,11 +94,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <h1>Origen</h1> 
         <p><p>En conjunto, más de la mitad de las emisiones se óxidos de azufre que llegan a la atmósfera se producen por actividades humanas, sobre todo por la combustión de carbón, petróleo y por la industria metalurgia, debido a que el azufre reacciona con el oxígeno en el proceso de combustión, formando SO2. En los procesos metalúrgicos, se liberan grandes cantidades de este gas debido a que se emplean frecuentemente los metales en forma de sulfuros.</p><p>En la naturaleza, el dióxido de azufre se encuentra sobre todo en las proximidades de los volcanes y las erupciones pueden liberar cantidades importantes. En España sus emisiones se concentran en Galicia y Aragón, al estar situadas en estas Comunidades importantes instalaciones productoras de electricidad que usan combustibles de baja calidad. En los últimos años se están produciendo importantes disminuciones en la emisión de este contaminante como consecuencia de estar sustituyéndose los carbones españoles (de baja calidad) por combustibles de importación, más limpios.</p></p> 
       </div> 
-      <div class='col-md-6 origin'> 
+      <div class='col-md-6 health'> 
         <h1>Efectos en la salud</h1> 
         <p><p>El dióxido de azufre es un gas irritante y tóxico. Afecta sobre todo las mucosidades y los pulmones provocando ataques de tos, si bien éste es absorbido por el sistema nasal. La exposición de altas concentraciones durante cortos períodos de tiempo puede irritar el tracto respiratorio, causar bronquitis, reacciones asmáticas, espasmos reflejos, parada respiratoria y congestionar los conductos bronquiales de los asmáticos. </p><p>El líquido se evapora rápidamente lo que puede provocar congelación al contacto con la piel. </p><p>Los efectos de los SOx empeoran cuando el dióxido de azufre se combina con partículas ó con la humedad del aire ya que se forma ácido sulfúrico, y produce lo que se conoce como lluvia ácida, provocando la destrucción de bosques, vida salvaje y la acidificación de las aguas superficiales.</p></p> 
       </div>
-      <div class='col-md-6 references'>
+      <div class='col-md-12 references'>
         <h1>Referencias</h1>
         <ul>
           <li><a href='http://www.prtr-es.es/SOx-oxidos-de-azufre,15598,11,2007.html'>Registro Estatal de Emisiones y Fuentes Contaminantes de España</a></li>

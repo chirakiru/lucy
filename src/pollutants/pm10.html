@@ -56,12 +56,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-right">
-                <li><a href="../index.html" class="link-kumya"><span data-letters="Inicio">Inicio</span></a></li>
                 <li><a href="../map.html" class="link-kumya"><span data-letters="Mapa">Mapa</span></a></li>  
-                <li><a href="../pollutant.html" class="link-kumya active scroll"><span data-letters="Contaminantes">Contaminantes</span></a></li>
-                <li><a href="../blog.html" class="link-kumya"><span data-letters="Blog">Blog</span></a></li>   
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Estaciones">Estaciones</span></a></li>
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Contactanos">Contáctanos</span></a></li>
+                <li><a href="#" class="link-kumya dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Contaminantes">Contaminantes</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/pollutants/pm10.html">PM 10</a></li>
+                    <li><a href="/pollutants/pm25.html">PM 2.5</a></li>
+                    <li><a href="/pollutants/o3.html">Ozono</a></li>
+                    <li><a href="/pollutants/co.html">Monóxido de Carbono</a></li>
+                    <li><a href="/pollutants/no2.html">Óxido de Nitrógeno</a></li>
+                    <li><a href="/pollutants/so2.html">Dióxido de azufre</a></li>
+                  </ul>
+                </li>
+              </ul> 
               </ul> 
               <div class="clearfix"> </div>
             </div>
@@ -69,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </nav>
       </div>  
       <div class="banner-text">
-         <h2>Partículas menores a 10 µm</h2> 
+         <h2 style='font-size: 4em;'>Partículas menores a 10 µm</h2> 
       </div>
       <!--//navigation--> 
     </div>
@@ -88,11 +94,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <h1>Origen</h1> 
         <p>Las fuentes de emisión de estas partículas pueden ser móviles ó estacionarias, destacando que un 77,9% de la cantidad total emitida de PM10 procede del polvo resuspendido existente en la atmósfera. La industria, la construcción y el comercio con un 7,6% y el transporte rodado con un 6,5% representan otros focos de contaminación de especial relevancia. <br/> Como fuentes minoritarias de contaminación es importante señalar que el 3,7% del total procede de quemas agrícola y un 3,3% es de origen doméstico. </p> 
       </div> 
-      <div class='col-md-6 origin'> 
+      <div class='col-md-6 health'> 
         <h1>Efectos en la salud</h1> 
         <p>La exposición prolongada o repetitiva a las PM10 puede provocar efectos nocivos en el sistema respiratorio de la persona, no obstante son menos perjudiciales que las PM2,5 ya que al tener un mayor tamaño, no logran atravesar los alveolos pulmonares, quedando retenidas en la mucosa que recubre las vías respiratorias superiores. La Directiva 2008/50/CE  indica que para la protección de la salud no pueden superarse los 50 microgramos por metro cúbico durante 24 horas  más de 35 veces por año civil. <br /> La mayoría de éstas partículas precipitan en la tierra, provocando una capa de polvo en la superficie que puede afectar seriamente a la salud tanto de los organismos terrestres como los organismos acuáticos.</p> 
       </div>
-      <div class='col-md-6 references'>
+      <div class='col-md-12 references'>
         <h1>Referencias</h1>
         <ul>
           <li><a href='http://www.prtr-es.es/Particulas-PM10,15673,11,2007.html'>Registro Estatal de Emisiones y Fuentes Contaminantes de España</a></li>

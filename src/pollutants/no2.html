@@ -56,12 +56,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-right">
-                <li><a href="../index.html" class="link-kumya"><span data-letters="Inicio">Inicio</span></a></li>
                 <li><a href="../map.html" class="link-kumya"><span data-letters="Mapa">Mapa</span></a></li>  
-                <li><a href="../pollutant.html" class="link-kumya active scroll"><span data-letters="Contaminantes">Contaminantes</span></a></li>
-                <li><a href="../blog.html" class="link-kumya"><span data-letters="Blog">Blog</span></a></li>   
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Estaciones">Estaciones</span></a></li>
-                <li><a href="../contact.html" class="link-kumya"><span data-letters="Contactanos">Contáctanos</span></a></li>
+                <li><a href="#" class="link-kumya dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Contaminantes">Contaminantes</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/pollutants/pm10.html">PM 10</a></li>
+                    <li><a href="/pollutants/pm25.html">PM 2.5</a></li>
+                    <li><a href="/pollutants/o3.html">Ozono</a></li>
+                    <li><a href="/pollutants/co.html">Monóxido de Carbono</a></li>
+                    <li><a href="/pollutants/no2.html">Óxido de Nitrógeno</a></li>
+                    <li><a href="/pollutants/so2.html">Dióxido de azufre</a></li>
+                  </ul>
+                </li>
+              </ul> 
               </ul> 
               <div class="clearfix"> </div>
             </div>
@@ -69,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </nav>
       </div>  
       <div class="banner-text">
-         <h2>Óxido de Nitrógeno</h2> 
+         <h2 style='font-size: 4em;'>Óxido de Nitrógeno</h2> 
       </div>
       <!--//navigation--> 
     </div>
@@ -88,11 +94,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <h1>Origen</h1> 
         <p><p><strong>Fuentes de emisión y aplicaciones de los óxidos de nitrógeno. </strong></p><p>Las fuentes más comunes de óxidos de nitrógeno en la naturaleza, son la descomposición bacteriana de nitratos orgánicos, los incendios forestales, quema de rastrojos y la actividad volcánica. </p><p>Las principales fuentes antropogénicas de emisión se producen en los escapes de los vehículos motorizados y en la quema de combustibles fósiles. Otros focos de menor relevancia, se llevan a cabo en los procesos biológicos de los suelos, en los que se produce la emisión de nitritos (NO<sub>2 </sub>) por parte de los microorganismos.</p></p> 
       </div> 
-      <div class='col-md-6 origin'> 
+      <div class='col-md-6 health'> 
         <h1>Efectos en la salud</h1> 
         <p><p><strong>Efectos sobre la salud humana y el medio ambiente. </strong></p><p><strong></strong></p><p>Es una sustancia corrosiva para la piel y el tracto respiratorio, provocando enrojecimiento y quemaduras cutáneas graves. </p><p>La inhalación en elevadas concentraciones y durante un corto periodo de tiempo, puede originar un edema pulmonar cuyos efectos no se observan hasta pasadas unas horas, agravándose con el esfuerzo físico. Una exposición prolongada puede afectar al sistema inmune y al pulmón, dando lugar a una menor resistencia frente a infecciones y causar cambios irreversibles en el tejido pulmonar. </p><p>Con respecto a los impactos producidos en el medio ambiente, se trata de una sustancia que tiene una gran trascendencia en la formación del smog fotoquímico, ya que al combinarse con otros contaminantes atmosféricos (por ejemplo los COVDM) influye en las reacciones de formación de ozono en la superficie de la tierra.</p><p>Por otra parte el NO<sub>2</sub> se forma a partir de la oxidación del óxido nítrico (NO), y tiene una vida corta en la atmósfera ya que se oxida rápidamente a nitratos (NO<sub>3</sub><sup>-</sup>) o a HNO<sub>3</sub> (ácido nítrico). En este último caso, se produce el fenómeno de la lluvia ácida que consiste en la reacción de los nitratos (NO<sub>3</sub>) con la humedad existente en el ambiente, dando lugar a ácido nítrico (HNO<sub>3</sub>), que precipita causando grandes destrozos en los bosques y la acidificación de las aguas superficiales. </p></p> 
       </div>
-      <div class='col-md-6 references'>
+      <div class='col-md-12 references'>
         <h1>Referencias</h1>
         <ul>
           <li><a href='http://www.prtr-es.es/NOx-oxidos-de-nitrogeno,15595,11,2007.html'>Registro Estatal de Emisiones y Fuentes Contaminantes de España</a></li>
