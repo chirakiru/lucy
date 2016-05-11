@@ -25,7 +25,7 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('./src/js/'));
 });
 
-gulp.task('build', ['html', 'css', 'fonts', 'images', 'data'], function() {
+gulp.task('build', ['html', 'css', 'fonts', 'images', 'data', 'load-pollutant'], function() {
     gulp.start('compress');
 })
 
@@ -65,4 +65,6 @@ gulp.task('data', [], function() {
 // Task for create pollutants pages
 gulp.task('load-pollutant', function() {
     loadPollutant();
+    return gulp.src('src/pollutants/*')
+        .pipe(gulp.dest('dist/pollutants'))
 });
