@@ -26,6 +26,7 @@ nav.navScroll ul.dropdown-menu li a {
 }
 nav.navScroll .logo a,nav.navScroll .logo a:hover{
     color: #1b676b;
+    background: rgba(0, 0, 0, 0) url("/images/lucy_logo.png") no-repeat scroll left top / 194px auto;
 }
 nav.navScroll li a.active {
     color: #fff;

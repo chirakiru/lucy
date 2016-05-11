@@ -30,7 +30,7 @@ build_pollutants_nav = function(shortcut, short_name, index) {
 build_pollutants_content = function(pollutant, shortcut, extract, index) {
   var _link, cls;
   cls = index === 0 ? 'active' : '';
-  _link = "/pollutant.html#" + ("" + shortcut);
+  _link = "/pollutants/" + shortcut + ".html";
   return "<div class='tab-pane " + cls + "' id='" + shortcut + "'> <div class='text'> <h3 class='title'>" + pollutant + "</h3> <p>" + extract + "</p> <div class='more more2'> <a href='" + _link + "' class='button-pipaluk button--inverted'>Leer Más</a> </div> </div> </div>";
 };
 

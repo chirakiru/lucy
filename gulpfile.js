@@ -2,6 +2,7 @@ var coffee  = require('gulp-coffee'),
     gulp    = require('gulp'),
     gutil   = require('gulp-util'),
 stripDebug  = require('gulp-strip-debug'),
+loadPollutant = require('./lib/loadPollutant.js'),
           $ = require('gulp-load-plugins')(),
 browserSync = require('browser-sync'),
      reload = browserSync.reload;
@@ -59,4 +60,9 @@ gulp.task('images', [], function() {
 gulp.task('data', [], function() {
     return gulp.src('src/data/*')
         .pipe(gulp.dest('dist/data'))
+});
+
+// Task for create pollutants pages
+gulp.task('load-pollutant', function() {
+    loadPollutant();
 });
