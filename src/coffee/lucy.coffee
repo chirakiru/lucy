@@ -20,7 +20,7 @@ build_pollutants_nav = (shortcut, short_name, index) ->
 
 build_pollutants_content = (pollutant, shortcut, extract, index) ->
   cls = if index == 0 then 'active' else ''
-  _link = "/pollutant.html#"+"#{shortcut}"
+  _link = "/pollutants/#{shortcut}.html"
   "<div class='tab-pane #{cls}' id='#{shortcut}'>
     <div class='text'>
       <h3 class='title'>#{pollutant}</h3>

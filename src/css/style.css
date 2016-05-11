@@ -65,9 +65,13 @@ body a:hover{
     line-height: 1em;
 }
 .logo h1 a {
-    color: #fff;
-	font-family: 'Abel-Regular';
-	text-decoration:none;
+    background: rgba(0, 0, 0, 0) url("/images/lucy_logo_light.png") no-repeat scroll left top / 194px auto;
+    display: block;
+    font-family: "Abel-Regular";
+    height: 100px;
+    margin: -23px;
+    text-decoration: none;
+    width: 200px;
 }
 .logo h1 a:hover{
     color: #fff;
@@ -1601,6 +1605,45 @@ h2.typoh2{
 .address ul li a:hover{
 	color: #000;
 }
+/*-- Pollutant section--*/
+.pollutant{
+
+}
+.pollutant h1{
+  color: #1b676b;
+  font-size: 50px;
+  font-style: normal;
+}
+
+.pollutant p{
+  font-family:'Abel-Regular';
+  color: #666;
+  text-align: justify;
+  font-size: 20px;
+}
+.pollutant img, p img{
+  height: 200px;
+  border: none;
+  float: left;
+  margin: 0px 0px 15px 20px;
+}
+.pollutant ul{
+  margin: 10px;
+}
+.pollutant li{
+  list-style-type: circle;
+  list-style-position: inside;
+  list-style-image: none;
+    font-family:'Abel-Regular';
+  color: #666;
+  text-align: justify;
+  font-size: 17px;
+}
+
+.description {
+  padding: 15px;
+}
+/*-- Pollutant --*/
 /*-- //contact --*/
 /*---- responsive-design -----*/
 @media(max-width:1280px){
