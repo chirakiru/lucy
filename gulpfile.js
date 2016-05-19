@@ -73,4 +73,6 @@ gulp.task('load-pollutant', function() {
 // Task for create blog
 gulp.task('load-blog', function() {
     buildBlog();
+    return gulp.src('src/blog/*')
+        .pipe(gulp.dest('dist/blog'))
 });
