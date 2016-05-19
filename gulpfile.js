@@ -5,6 +5,7 @@ stripDebug  = require('gulp-strip-debug'),
 loadPollutant = require('./lib/loadPollutant.js'),
           $ = require('gulp-load-plugins')(),
 browserSync = require('browser-sync'),
+buildBlog   = require('./lib/LoadBlog.js'),
      reload = browserSync.reload;
 
 // Static server
@@ -67,4 +68,9 @@ gulp.task('load-pollutant', function() {
     loadPollutant();
     return gulp.src('src/pollutants/*')
         .pipe(gulp.dest('dist/pollutants'))
+});
+
+// Task for create blog
+gulp.task('load-blog', function() {
+    buildBlog();
 });

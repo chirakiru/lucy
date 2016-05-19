@@ -1,7 +1,7 @@
 {
-  "name": "landinga",
+  "name": "lucy",
   "version": "1.0.0",
-  "description": "Landing comicgram",
+  "description": "Un Respiro a mi ciudad",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,13 +16,19 @@
     "feed-read": "0.0.1",
     "gulp": "^3.9.1",
     "gulp-coffee": "^2.3.1",
-    "gulp-replace": "^0.5.4",
-    "gulp-util": "^3.0.7",
-    "through2": "^2.0.1",
-    "yql": "^1.0.2",
-    "gulp-strip-debug": "1.0.2",
     "gulp-load-plugins": "~0.6.0",
+    "gulp-minify-css": "~1.1.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-strip-debug": "1.0.2",
     "gulp-uglify": "1.0.1",
-    "gulp-minify-css": "~1.1.0"
+    "gulp-util": "^3.0.7",
+    "markdown": "^0.5.0",
+    "marked": "^0.3.5",
+    "through2": "^2.0.1",
+    "yamljs": "^0.2.7",
+    "yql": "^1.0.2"
+  },
+  "dependencies": {
+    "marked": "^0.3.5"
   }
 }
