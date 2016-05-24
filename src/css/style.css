@@ -39,6 +39,19 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+
+body.post .single-page-info p{
+  color: #3d3d3d;
+  font-size: 1.2em;
+  text-align: justify;
+}
+body.post .single-page-info h2{
+  border-bottom: 4px solid #00b4cc;
+  color: #3d3d3d;
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 1.3em 0;
+}
 /*--baner--*/
 .banner {
    background:url(../images/banner_mty_1.jpg)no-repeat 0px 0px;
