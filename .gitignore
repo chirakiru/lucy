@@ -19,5 +19,5 @@ pattern/node_modules/
 .DS_Store
 dist/
 node_modules/
-src/pollutants/*
+/src/pollutants/*
 /src/blog/*
