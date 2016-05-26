@@ -16,7 +16,7 @@ Y bueno, los datos justificaban ese titular. Según el reporte, Monterrey sí es
 
 Así que queremos mencionar algunos puntos importantes:
 
-- No todas las estaciones de monitoreo en Monterrey cuentan con las herramientas necesarias para medir este tipo de contaminante (Partículas menores a 2.5 µm). Actualmente sólo 5 estaciones (de 10) tienen la capacidad de medir y reportar las concentraciones de este contaminante.
+- No todas las estaciones de monitoreo en Monterrey cuentan con las herramientas necesarias para medir este tipo de contaminante (Partículas menores a 2.5 µm). Actualmente, sólo 5 estaciones (de 10) tienen la capacidad de medir y reportar las concentraciones de este contaminante.
 
 - En el video no se especifica si se trata de puntos IMECA o niveles de concentración del contaminante. Desde nuestro punto de vista, expresar números sin mencionar qué representan es un ejemplo claro de mala divulgación. Por cierto, era la cifra del nivel de concentración.
 
@@ -92,11 +92,11 @@ El aire de Monterrey está muy contaminado, ¿pero qué sigue? Podemos comenzar 
 
 - Exige a [tu diputado en el congreso](http://www.hcnl.gob.mx/organizacion/distritos.php) el apoyo a las iniciativas que tengan que ver con mejorar el sistema de transporte público. Para que todos usemos el transporte público éste debe ser ágil, accesible y seguro. Asimismo, no dejes de enviar tus propuestas. Recuerda que todas las iniciativas presentadas por los ciudadanos son turnadas sin excepción a la Comisión respectiva, tales como las comisiones del Medio Ambiente, de Desarrollo Urbano y de Transporte.
 
-- No usemos el coche para ir a la tienda de la esquina, a menos que sea extrictamente necesario.
+- No usemos el coche para ir a la tienda de la esquina, a menos que sea estrictamente necesario.
 
 - Plantemos un árbol. O dos. O los que podamos.
 
-- Transportémonos en bicicleta.
+- Transportémonos en bicicleta o caminando. No hay otros medios de transporte más limpios y eficientes.
 
 - Digamos no al uso de pirotecnia.
 
@@ -108,7 +108,7 @@ Sabemos que tenemos que tomar en cuenta algunas cosas que no podemos evitar, com
 
 - La falta de drenaje profundo. Nuestras calles generalmente acumulan mucha suciedad y eso se debe en gran medida a la falta de un drenaje profundo.
 
-- Nuestro clima. Un día hace calor, otro día frio y, al día siguiente, un viento muy fuerte. A veces, todo en un mismo día. Aunque tengamos en un clima muy voluble, no es excusa para no hacer un esfuerzo por evitar contaminar.
+- Nuestro clima. Un día hace calor, otro día frio y, al día siguiente, un viento muy fuerte. A veces, todo en un mismo día. Aunque tengamos un clima muy voluble, no es excusa para no hacer un esfuerzo por evitar contaminar.
 
 - Las industrias de Nuevo León. Por supuesto, no es que todas las empresas contaminen como si no hubiera un mañana, pero en su conjunto son una fuente considerable de contaminación en el aire de nuestra zona.
 
