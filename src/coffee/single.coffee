@@ -116,7 +116,6 @@ build_chart_oms_post = (measurements, concentration) ->
     } ]
 
 $(document).on 'page: ready', ->
-  // Adds bootstrap css classes to naked tables
   $('table').addClass('table table-bordered')
 
   last_month_station(2, 'PM2.5')
