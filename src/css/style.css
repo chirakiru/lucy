@@ -1100,13 +1100,13 @@ p {
     margin: 4em 0;
 }
 .blog ul li {
-    display: inline-block;
-    margin-right: 2.5em;
-    color: #aaa;
-    font-size: 1em;
+  display: list-item;
+  margin-left: 10px;
+  color: #aaa;
+  font-size: 1em;
 }
 .comment-icons ul li:nth-child(5) {
-    margin: 0;
+  margin: 0;
 }
 .blog ul li a{
   color: #aaa;
