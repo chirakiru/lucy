@@ -4,7 +4,7 @@ title: Monterrey, la ciudad de las montañas... grises.
 date:  2016-05-25
 tags: OMS "Calidad del aire"
 description: La semana pasada vimos una noticia: la Ciudad De México no es la ciudad más contaminada de México, sino que, en realidad, ese deshonroso puesto le pertenece ahora a la ciudad de Monterrey...
-author: Ciudadano M.
+author: Ciudadano M
 image: mty_pollutant_1.jpg
 ---
 
@@ -25,6 +25,8 @@ Así que queremos mencionar algunos puntos importantes:
 Aunque el video está mal expresado, insistimos en que sigue siendo correcto. En efecto, tenemos una mala calidad del aire en el Área Metropolitana de Monterrey y, como se puede ver, no es algo nuevo, sino algo que se ha venido presentando desde hace mucho tiempo... Y se sigue presentando.
 
 Por ejemplo, en la siguiente gráfica podemos ver el comportamiento de la estación de monitoreo #2, localizada en el centro de Santa Catarina, para los contaminantes PM-2.5 y PM-10.
+
+<br/>
 
 <div id="controls">
 	<select id="pollutant-char">
@@ -49,13 +51,21 @@ Por ejemplo, en la siguiente gráfica podemos ver el comportamiento de la estaci
 
 <div id="chart-container-oms" style="width:100%; height:400px;"></div>
 
+<br/>
+
 Tomando estos datos, los promedios diarios son los siguientes:
+
+<br/>
 
 <div id="chart-container-average" style="width:100%; height:400px;"></div>
 
+<br/>
+
 Según la norma [NOM-025-SSAI-2014](http://www.dof.gob.mx/nota_detalle_popup.php?codigo=5357042), para las partículas menores a 2.5 micras (PM-2.5), el límite para el promedio de 24 horas es de 45 µg/m3, y para Partículas Menores a 10 Micras (PM-10) es de 75 µg/m3. 
 
-Y tomando como base esta misma norma podemos resaltar los siguientes parrafos:
+Y tomando como base esta misma norma podemos resaltar los siguientes párrafos:    
+
+<br/>
 
 > En un estudio donde se analizaron daños provocados por partículas gruesas (PM10-PM2.5) se encontró que por cada 10 μg/m3 de incremento de este contaminante se asoció un aumento de 4% de las muertes totales diarias.
 
@@ -64,7 +74,7 @@ Y tomando como base esta misma norma podemos resaltar los siguientes parrafos:
 Para esto la [OMS](http://www.who.int/about/es/) en su artículo [Guías de calidad del aire de la OMS relativas al material particulado, el ozono, el dióxido de nitrógeno y el dióxido de azufre](http://apps.who.int/iris/bitstream/10665/69478/1/WHO_SDE_PHE_OEH_06.02_spa.pdf) establece **un valor de 20 μg/m3 como límite para la concentración promedio anual de PM-10, y de 10 μg/m3 como límite para la concentración promedio anual de PM-2.5**.
 
 
-| -                                             | OMS      | Norma Oficial Mexicana |
+|                                               | OMS      | Norma Oficial Mexicana |
 |-----------------------------------------------|----------|------------------------|
 | Límite concentración promedio anual PM-10     | 20 μg/m3 | 40 μg/m3               |
 | Límite concentración promedio 24 horas PM-10  | 50 μg/m3 | 75 μg/m3               |
