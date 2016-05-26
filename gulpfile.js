@@ -26,7 +26,8 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('./src/js/'));
 });
 
-gulp.task('build', ['html', 'css', 'fonts', 'images', 'data', 'load-pollutant','load-blog'], function() {
+gulp.task('build', ['load-blog','html', 'css', 'fonts', 'images', 'data', 'load-pollutant'], function() {
+    gulp.src('src/blog/**/*').pipe(gulp.dest('dist/blog'))
     gulp.start('compress');
 })
 
@@ -73,6 +74,4 @@ gulp.task('load-pollutant', function() {
 // Task for create blog
 gulp.task('load-blog', function() {
     buildBlog();
-    return gulp.src('src/blog/*/*/*.html')
-        .pipe(gulp.dest('dist/blog'))
 });
