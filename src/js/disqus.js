@@ -1,6 +1,5 @@
-var url = window.location.href;
+var url = 'unrespiroamiciudad.com';
 var identifier = window.location.href.split('/')[6];
-console.log(url);
 console.log(identifier);
 var disqus_config = function () {
     this.page.url = url;  // Replace PAGE_URL with your page's canonical URL variable
