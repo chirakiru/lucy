@@ -22,7 +22,6 @@ AddQuote = (function() {
 
 build_pollutants_nav = function(shortcut, short_name, index) {
   var cls;
-  console.log(index);
   cls = index === 0 ? 'active' : '';
   return "<li class='" + cls + "'><a href='#" + shortcut + "' aria-controls='" + shortcut + "' role='tab' data-toggle='tab'>" + short_name + "</a></li>";
 };

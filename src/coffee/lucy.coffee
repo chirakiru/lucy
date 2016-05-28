@@ -14,7 +14,6 @@ AddQuote = (->
 )()
 
 build_pollutants_nav = (shortcut, short_name, index) ->
-  console.log index
   cls = if index == 0 then 'active' else ''
   "<li class='#{cls}'><a href='##{shortcut}' aria-controls='#{shortcut}' role='tab' data-toggle='tab'>#{short_name}</a></li>"
 
