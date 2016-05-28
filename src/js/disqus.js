@@ -1,4 +1,4 @@
-var url = 'unrespiroamiciudad.com';
+var url = window.location.href;
 var identifier = window.location.href.split('/')[6];
 console.log(identifier);
 var disqus_config = function () {
