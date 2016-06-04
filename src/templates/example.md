@@ -2,7 +2,9 @@
 layout: post
 title: Un titulo chirris chirris
 date:   2015-10-07
-tags: Programación
+tags: 
+  - Programación
+  - Otro Tag
 description: Una descripción chirris chirris
 author: El Autor
 image: mty_pollutant_1.jpg

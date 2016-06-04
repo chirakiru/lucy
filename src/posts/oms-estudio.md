@@ -2,7 +2,9 @@
 layout: post
 title: Monterrey, la ciudad de las montañas... grises.
 date:  2016-05-25
-tags: OMS "Calidad del aire"
+tags: 
+  - OMS 
+  - Calidad del aire
 description: La semana pasada vimos una noticia: la Ciudad De México no es la ciudad más contaminada de México, sino que, en realidad, ese deshonroso puesto le pertenece ahora a la ciudad de Monterrey...
 author: Ciudadano M
 image: mty_pollutant_1.jpg
