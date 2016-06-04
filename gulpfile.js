@@ -6,6 +6,7 @@ loadPollutant = require('./lib/loadPollutant.js'),
           $ = require('gulp-load-plugins')(),
 browserSync = require('browser-sync'),
 buildBlog   = require('./lib/LoadBlog.js'),
+buildFeed   = require('./lib/LoadFeed.js'),
      reload = browserSync.reload;
 
 // Static server
@@ -74,4 +75,9 @@ gulp.task('load-pollutant', function() {
 // Task for create blog
 gulp.task('load-blog', function() {
     buildBlog();
+});
+
+// Task for create feed blog
+gulp.task('load-feed', function() {
+    buildFeed();
 });
