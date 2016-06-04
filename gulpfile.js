@@ -27,7 +27,7 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('./src/js/'));
 });
 
-gulp.task('build', ['load-blog','html', 'css', 'fonts', 'images', 'data', 'load-pollutant'], function() {
+gulp.task('build', ['load-blog', 'load-feed', 'html', 'css', 'fonts', 'images', 'data', 'load-pollutant'], function() {
     gulp.src('src/blog/**/*').pipe(gulp.dest('dist/blog'))
     gulp.start('compress');
 })
