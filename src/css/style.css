@@ -42,7 +42,8 @@ body a:hover{
 
 body.post .single-page-info p{
   color: #3d3d3d;
-  font-size: 10pt;
+  font-size: 13pt;
+  font-family: Cardo;
 }
 body.post .single-page-info h2{
   border-bottom: 4px solid #00b4cc;
@@ -1073,8 +1074,8 @@ p {
 	color: #000;
 }
 .blog p{
-	line-height:1.4em;
-  margin-top: 1.2em;
+	line-height:1.5em;
+  margin-top: 1.6em;
 }
 .blog p.snglp {
     font-size: 1em;
