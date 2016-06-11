@@ -40,141 +40,191 @@ average_per_week = function(station, concentration, weeks) {
 
 build_chart_avg = function(measurements, concentration) {
   var data;
-  data = measurements.results[0].series[0].values;
-  Highcharts.setOptions({
-    lang: {
-      months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-      weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-      shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Nov', 'Dic']
-    }
-  });
-  return $('#chart-container-average').highcharts({
-    chart: {
-      zoomType: 'x'
-    },
-    title: {
-      text: "Promedio de concentraciones " + concentration + " a través del tiempo"
-    },
-    subtitle: {
-      text: document.ontouchstart === void 0 ? 'Haga clic y arrastre en el área de trazado para hacer un zoom' : 'Arrastra la tabla para hacer un zoom'
-    },
-    xAxis: {
-      type: 'datetime'
-    },
-    yAxis: {
+  if (measurements.results[0].series !== void 0) {
+    data = measurements.results[0].series[0].values;
+    Highcharts.setOptions({
+      lang: {
+        months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Nov', 'Dic']
+      }
+    });
+    return $('#chart-container-average').highcharts({
+      chart: {
+        zoomType: 'x'
+      },
       title: {
-        text: 'Concentración'
-      }
-    },
-    legend: {
-      enabled: false
-    },
-    plotOptions: {
-      area: {
-        fillColor: {
-          linearGradient: {
-            x1: 0,
-            y1: 0,
-            x2: 0,
-            y2: 1
+        text: "Promedio de concentraciones " + concentration + " a través del tiempo"
+      },
+      subtitle: {
+        text: document.ontouchstart === void 0 ? 'Haga clic y arrastre en el área de trazado para hacer un zoom' : 'Arrastra la tabla para hacer un zoom'
+      },
+      xAxis: {
+        type: 'datetime'
+      },
+      yAxis: {
+        title: {
+          text: 'Concentración'
+        }
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        area: {
+          fillColor: {
+            linearGradient: {
+              x1: 0,
+              y1: 0,
+              x2: 0,
+              y2: 1
+            },
+            stops: [[0, Highcharts.getOptions().colors[0]], [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]]
           },
-          stops: [[0, Highcharts.getOptions().colors[0]], [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]]
-        },
-        marker: {
-          radius: 2
-        },
-        lineWidth: 1,
-        states: {
-          hover: {
-            lineWidth: 1
-          }
-        },
-        threshold: null
+          marker: {
+            radius: 2
+          },
+          lineWidth: 1,
+          states: {
+            hover: {
+              lineWidth: 1
+            }
+          },
+          threshold: null
+        }
+      },
+      series: [
+        {
+          type: 'area',
+          name: "Concentración de " + concentration,
+          data: data,
+          zones: [
+            {
+              value: 42,
+              color: '#90ed7d'
+            }, {
+              value: 100,
+              color: '#f7a35c'
+            }, {
+              color: '#ff423e'
+            }
+          ]
+        }
+      ]
+    });
+  } else {
+    return $('#chart-container-average').highcharts({
+      title: {
+        text: "Lo sentimos no contamos con datos de este contaminate para esta estación."
+      },
+      series: [
+        {
+          type: 'area',
+          name: 'Datos no encontrados',
+          data: []
+        }
+      ],
+      lang: {
+        noData: 'u_u'
+      },
+      noData: {
+        style: {
+          fontWeight: 'bold',
+          fontSize: '15px',
+          color: '#303030'
+        }
       }
-    },
-    series: [
-      {
-        type: 'area',
-        name: "Concentración de " + concentration,
-        data: data,
-        zones: [
-          {
-            value: 42,
-            color: '#90ed7d'
-          }, {
-            value: 100,
-            color: '#f7a35c'
-          }, {
-            color: '#ff423e'
-          }
-        ]
-      }
-    ]
-  });
+    });
+  }
 };
 
 build_chart_oms_post = function(measurements, concentration) {
   var data;
-  data = measurements.results[0].series[0].values;
-  Highcharts.setOptions({
-    lang: {
-      months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-      weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-      shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Nov', 'Dic']
-    }
-  });
-  return $('#chart-container-oms').highcharts({
-    chart: {
-      zoomType: 'x'
-    },
-    title: {
-      text: "Concentraciones " + concentration + " a través del tiempo"
-    },
-    subtitle: {
-      text: document.ontouchstart === void 0 ? 'Haga clic y arrastre en el área de trazado para hacer un zoom' : 'Arrastra la tabla para hacer un zoom'
-    },
-    xAxis: {
-      type: 'datetime'
-    },
-    yAxis: {
+  if (measurements.results[0].series !== void 0) {
+    data = measurements.results[0].series[0].values;
+    Highcharts.setOptions({
+      lang: {
+        months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Nov', 'Dic']
+      }
+    });
+    return $('#chart-container-oms').highcharts({
+      chart: {
+        zoomType: 'x'
+      },
       title: {
-        text: 'Concentración'
-      }
-    },
-    legend: {
-      enabled: false
-    },
-    plotOptions: {
-      area: {
-        fillColor: {
-          linearGradient: {
-            x1: 0,
-            y1: 0,
-            x2: 0,
-            y2: 1
+        text: "Concentraciones " + concentration + " a través del tiempo"
+      },
+      subtitle: {
+        text: document.ontouchstart === void 0 ? 'Haga clic y arrastre en el área de trazado para hacer un zoom' : 'Arrastra la tabla para hacer un zoom'
+      },
+      xAxis: {
+        type: 'datetime'
+      },
+      yAxis: {
+        title: {
+          text: 'Concentración'
+        }
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        area: {
+          fillColor: {
+            linearGradient: {
+              x1: 0,
+              y1: 0,
+              x2: 0,
+              y2: 1
+            },
+            stops: [[0, Highcharts.getOptions().colors[0]], [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]]
           },
-          stops: [[0, Highcharts.getOptions().colors[0]], [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]]
-        },
-        marker: {
-          radius: 2
-        },
-        lineWidth: 1,
-        states: {
-          hover: {
-            lineWidth: 1
-          }
-        },
-        threshold: null
+          marker: {
+            radius: 2
+          },
+          lineWidth: 1,
+          states: {
+            hover: {
+              lineWidth: 1
+            }
+          },
+          threshold: null
+        }
+      },
+      series: [
+        {
+          type: 'area',
+          name: "Concentración de " + concentration,
+          data: data
+        }
+      ]
+    });
+  } else {
+    return $('#chart-container-average').highcharts({
+      title: {
+        text: "Lo sentimos, por el momento no contamos con datos del contaminate para la estación seleccionada."
+      },
+      series: [
+        {
+          type: 'area',
+          name: 'Datos no encontrados',
+          data: []
+        }
+      ],
+      lang: {
+        noData: 'u_u'
+      },
+      noData: {
+        style: {
+          fontWeight: 'bold',
+          fontSize: '15px',
+          color: '#303030'
+        }
       }
-    },
-    series: [
-      {
-        type: 'area',
-        name: "Concentración de " + concentration,
-        data: data
-      }
-    ]
-  });
+    });
+  }
 };
 
 $(document).on('page: ready', function() {
